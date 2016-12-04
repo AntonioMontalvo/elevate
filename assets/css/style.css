@@ -1,3 +1,124 @@
 body{
-	background-color: red;
+	background-color: pink;
+	background-image: url('../images/space.jpg');
+	font-family: 'Play', sans-serif;
+	opacity: 0.95;
 }
+
+
+
+a {
+	color: limegreen;
+	font-size: 20px;
+}
+
+.nav-tabs {
+	border-color: limegreen;
+}
+
+.row {
+	padding-top: 40px;
+
+}
+
+h1 {
+	font-size: 100px;
+	text-align: center;
+	/*font-family: 'Raleway', sans-serif;*/
+	/*font-family: 'Play', sans-serif;*/
+	/*font-family: 'Orbitron', sans-serif;*/
+	/*font-family: 'Cinzel', serif;*/
+	/*font-family: 'Comfortaa', cursive;*/
+	font-family: 'Audiowide', cursive;
+}
+
+h2 {
+	text-align: center;
+}
+
+h5 {
+	font-size: 44px;
+}
+
+#main{
+	width:1000px;
+}
+
+#sidebar {
+	margin-left: -40px;
+	margin-top: 109px;
+}
+
+.sidebar-buttons {
+	background-color: limegreen;
+	border-radius: 21px;
+	text-align: center;
+	opacity: 0.9;
+}
+
+.row li {
+	color: white;
+	font-size: 30px;
+	list-style-type: none;
+	/*border: 2px solid red;*/
+	width: 250px;
+	height: 80px;
+}
+
+#encapsulate {
+	background-color: #56a059;
+	opacity: 0.9;
+	width: 799px;
+	height: 500px;
+	border: 3px solid black;
+	margin: 80px 0 0 50px;
+/*	z-index: -1;*/
+}
+
+
+.choice {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border: 2px solid grey;
+	border-radius: 50%;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+
+.choice p {
+	margin-top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#block-question {
+	margin-top: 190px;
+}
+
+#question {
+	text-align: center;
+}
+
+#answer {
+	text-align: center;
+}
+
+#next-button {
+	margin-top: 30px;
+}
+
+#next-exercise {
+	background-color: limegreen;
+	width: 150px;
+	border-radius: 21px;
+	text-align: center;
+	opacity: 0.9;
+}
+
+
+
+
+
+
