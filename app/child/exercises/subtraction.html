@@ -7,8 +7,8 @@
     <title>Subtraction page</title>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Cinzel|Comfortaa|Orbitron|Play|Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- bootstrap js -->
@@ -29,39 +29,86 @@
 
 <body class="container">
     <!-- header -->
-    <header>
-        <ul class="nav nav-tabs">
-            <li><a href="#">Home</a></li>
-            <!-- <li><a href="#">Account</a></li> -->
-            <li><a href="#">Logout</a></li>
+    <header <ul class="nav nav-tabs">
+        <li><a href="#">Home</a></li>
+        <!-- <li><a href="#">Account</a></li> -->
+        <li><a href="#">Logout</a></li>
         </ul>
         <!--  <div class="flash-message" ng-if="flash">
             <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
         </div> -->
     </header>
-
-
     <div class="row">
         <div class="col-md-2">
             <ul id="sidebar">
-                <li><div class="sidebar-buttons">Addition</div></li>
-                <li><div class="sidebar-buttons">Subtraction</div></li>
-                <li><div class="sidebar-buttons">Patterns</div></li>
-                <li><div class="sidebar-buttons">Groupings</div></li>
-                <li><div class="sidebar-buttons">Shapes</div></li>
-                <li><div class="sidebar-buttons">Measurements</div></li>
+                <li>
+                    <div class="sidebar-buttons">Addition</div>
+                </li>
+                <li>
+                    <div class="sidebar-buttons">Subtraction</div>
+                </li>
+                <li>
+                    <div class="sidebar-buttons">Patterns</div>
+                </li>
+                <li>
+                    <div class="sidebar-buttons">Counting</div>
+                </li>
+                <li>
+                    <div class="sidebar-buttons">Shapes</div>
+                </li>
+                <li>
+                    <div class="sidebar-buttons">Measurements</div>
+                </li>
             </ul>
         </div>
-
         <div class="col-md-1"></div>
-
         <div class="col-md-8">
-            <div id="encapsulate"></div>
+            <div class="row" id="encapsulate">
+                <div class="col-md-3">
+                    <div class="choice" id="choice1">
+                        <p>3</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="choice" id="choice2">
+                        <p>8</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="choice" id="choice3">
+                        <p>6</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="choice" id="choice4">
+                        <p>4</p>
+                    </div>
+                </div>
+                <div id="block-question">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3" id="question">
+                            <h5>{{ 6 - 3 }}</h5>
+                        </div>
+                        <div class="col-md-1">
+                            <h5>=</h5>
+                        </div>
+                        <div class="col-md-2" id="answer">
+                            <h5>{{   }}</h5>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9"></div>
+                    <div class="col-md-2" id="next-button">
+                        <div id="next-exercise">Next Exercise</div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
         </div>
-
-
     </div>
-
-
 </body>
+
 </html>
