@@ -1,5 +1,5 @@
 body{
-	background-color: pink;
+	background-color: black;
 	background-image: url('../images/space.jpg');
 	font-family: 'Play', sans-serif;
 	opacity: 0.95;
@@ -94,7 +94,7 @@ h5 {
 }
 
 #block-question {
-	margin-top: 190px;
+	margin-top: 10px;
 }
 
 #question {
@@ -117,8 +117,121 @@ h5 {
 	opacity: 0.9;
 }
 
+#prompt{
+	padding-top: 30px;
+}
 
+/*SHAPES*/
+.circle {
+    width: 100px;
+    height: 100px;
+    background: rgba(185, 0, 255, 0.84);;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+.circle_question {
+   width: 50px;
+    height: 50px;
+    background: rgba(0, 67, 255, 0.84);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
 
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(185, 0, 255, 0.84);;
+}
+.triangle_question {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(0, 67, 255, 0.84);
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background: rgba(185, 0, 255, 0.84);;
+}
 
+.square_question {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 67, 255, 0.84);
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid rgba(185, 0, 255, 0.84);;
+}
+.triangle-down_question {
+        width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid rgba(0, 67, 255, 0.84);
+}
+#options {
+	    margin-left: inherit;
+	    padding-left: 51px;
+}
+
+#empty-space { 
+	border-bottom: 2px solid black;
+	width: 85px;
+	height: 50px;
+	margin-left: 20px;
+}
+
+/* answer choices on shapes exercise */
+.answer-button {
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	padding-top: 5px;
+	width: 122px;
+	height: 46px;
+	background-color: rgba(0, 67, 255, 0.84);
+}
+#constellation{
+	text-align: center;
+	margin-top: -20px;
+}
+
+#constellation img{
+	width:25%;
+}
+#counting{
+	margin-top: -30px;
+}
+#after-counting{
+	margin-top: -10px;
+}
+.stars{
+	width: 50%;
+}
+.rocket-answer{
+	text-align: center;
+	margin: 0 auto;
+	width: 220px;
+}
+.rocket-pic img{
+	width:50%;
+}
+.rocket-pic{
+	text-align: center;
+}
+#right-rocket{
+	width: 20%;
+	margin-top: 50px;
+}
 
 

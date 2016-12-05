@@ -7,8 +7,8 @@
     <title>Measurements page</title>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Cinzel|Comfortaa|Orbitron|Play|Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- bootstrap js -->
@@ -47,7 +47,7 @@
                 <li><div class="sidebar-buttons">Addition</div></li>
                 <li><div class="sidebar-buttons">Subtraction</div></li>
                 <li><div class="sidebar-buttons">Patterns</div></li>
-                <li><div class="sidebar-buttons">Groupings</div></li>
+                <li><div class="sidebar-buttons">Counting</div></li>
                 <li><div class="sidebar-buttons">Shapes</div></li>
                 <li><div class="sidebar-buttons">Measurements</div></li>
             </ul>
@@ -56,7 +56,39 @@
         <div class="col-md-1"></div>
 
         <div class="col-md-8">
-            <div id="encapsulate"></div>
+            <div id="encapsulate">
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="rocket-pic"><img  src="../../../assets/images/rocket.png">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="rocket-pic"><img id="right-rocket"  src="../../../assets/images/rocket.png">
+                            </div>
+                        </div>
+                </div>
+                <div class="row" id="counting">
+                    <div class="col-md-12"><h2>Which rocket is smaller?</h2></div>
+                </div>
+
+                 <div id="block-question">   
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5"><div class="answer-button rocket-answer">The Left Rocket</div></div>
+                        <div class="col-md-5"><div class="answer-button rocket-answer">The Right Rocket</div></div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9"></div>
+                    <div class="col-md-2" id="next-button">
+                        <div id="next-exercise">Next Exercise</div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                </div>
+
+            </div>
         </div>
 
 
