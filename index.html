@@ -1,44 +1,119 @@
 <!DOCTYPE html>
-<html ng-app = 'Elevate'>
+<html ng-app="Elevate">
+
 <head>
-  <meta charset="utf-8">
-  <meta ame="viewport" content="width=device-width">
-  <title>Elevate</title>
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/normalize.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- angular -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
-  <!-- ui-router -->
-  <script src="../vendor/angular-ui-router.min.js"></script>
-  <!-- app -->
-  <script src="../app/app.js"></script>
-  <script src="../app/app-services/user.service.js"></script>
-  <script src="../app/child/child.controller.js"></script>
-  <script src="../app/child/exercises/exercises.controller.js"></script>
-  <script src="../app/home/index.controller.js"></script>
-  <script src="../app/parent/parent.controller.js"></script>
-  <script src="../app/teacher/teacher.controller.js"></script>
+    <meta charset="utf-8">
+    <meta ame="viewport" content="width=device-width">
+    <title>Addition page</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Cinzel|Comfortaa|Orbitron|Play|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    
+    <!-- ngrouter -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+    <!-- app -->
+    <script src="app/app.js"></script>
+    <script src="app/app-services/user.service.js"></script>
+    <script src="app/child/exercises/exercises.controller.js"></script>
+    
 </head>
 
+<body class="container" ng-controller="HomeCtrl">
+    <!-- header -->
+    <header> <ul class="nav nav-tabs">
+        <li><a href="#">Home</a></li>
+        <!-- <li><a href="#">Account</a></li> -->
+        <li><a href="#">Logout</a></li>
+        </ul>
+    </header>
 
 
-<body>
-<div ng-controller='HomeCtrl'>
-  {{greeting}}
-</div>
+    <!-- WRAPPER beginning-->
+    <div class="row">
+        <div class="col-md-2">
+            <ul id='sidebar'>
+                <li ng-repeat="field in areasOfKnowledge" ng-class="{'active':verifyFieldOfKnowledge(field)}">
+                    <a href='#' ng-click="showFieldOfKnowledge(field)"><div class="sidebar-buttons">{{field.name}}</div></a>
+                    
+                </li>
+            </ul>
+        </div>
+    
+        <div class="col-md-1"></div>
 
-  <!-- models -->
- <!--  <script src="../models/result.js"></script>
-  <script src="../models/user.js"></script> -->
-
-  <!-- services(collection of general methods) -->
-  <!-- <script src="../services/user.service.js"></script> -->
 
 
-  </body>
+
+
+        <!-- need to modularize this div -->
+        <div class="col-md-8"  ng-if="addition.active">
+            <div id="encapsulate" ng-if="addition.exerciseOne">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3" id="question">
+                        <h5>3 + 5</h5>
+                    </div>
+                    <div class="col-md-1">
+                        <h5>=</h5>
+                    </div>
+                    <div class="col-md-2" id="answer">
+                        <h5>{{   }}</h5>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row">
+                    <ul>
+                        <li ng-repeat="choice in exercises.choices">
+                            <div class="col-md-3" class="choice" id="choice1">
+                                {{ choice }}
+                            </div>
+                        </li>
+                    </ul> 
+                   <!--  <div class="col-md-3">
+                        <div class="choice" id="choice2">
+                            <p>8</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="choice" id="choice3">
+                            <p>3</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="choice" id="choice4">
+                            <p>4</p>
+                        </div>
+                    </div> -->
+                </div>
+                    
+                <div class="row">
+                    <div class="col-md-9"></div>
+                    <div class="col-md-2" id="next-button">
+                        <button type="button" ng-click="nextAdditionExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link" id="next-exercise">Next Exercise<span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        </button>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div> 
+            </div>  
+        </div>
+        <!-- need to modularize this div -->
+
+
+
+
+        <div class="col-md-1"></div>
+    </div>
+    <!-- WRAPPER end -->
+
+</body>
+
 </html>

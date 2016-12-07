@@ -8,7 +8,7 @@ body{
 
 
 a {
-	color: limegreen;
+	color: white;
 	font-size: 20px;
 }
 
@@ -54,6 +54,7 @@ h5 {
 	border-radius: 21px;
 	text-align: center;
 	opacity: 0.9;
+	padding: 5px;
 }
 
 .row li {
@@ -71,7 +72,7 @@ h5 {
 	width: 799px;
 	height: 500px;
 	border: 3px solid black;
-	margin: 80px 0 0 50px;
+	margin: 80px 0 0 47px;
 /*	z-index: -1;*/
 }
 
@@ -233,5 +234,7 @@ h5 {
 	width: 20%;
 	margin-top: 50px;
 }
+
+
 
 
