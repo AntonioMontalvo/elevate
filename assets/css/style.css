@@ -10,6 +10,7 @@ body{
 a {
 	color: limegreen;
 	font-size: 20px;
+	color:white;
 }
 
 .nav-tabs {
@@ -38,6 +39,7 @@ h2 {
 
 h5 {
 	font-size: 44px;
+	margin-top: 150px;
 }
 
 #main{

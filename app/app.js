@@ -1,5 +1,5 @@
 var ElevateApp = angular.module('Elevate', [
-  'ui.router'
+  // 'ui.router'
 ])
 
 // var angular = require('angular');
