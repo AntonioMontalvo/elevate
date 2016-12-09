@@ -26,17 +26,17 @@
     
 </head>
 
-<body class="container" ng-controller="HomeCtrl">
+<body class="container" ng-controller="ExerciseCtrl">
     <!-- header -->
     <header> <ul class="nav nav-tabs">
         <li><a href="#">Home</a></li>
-        <!-- <li><a href="#">Account</a></li> -->
+        <li><a href="#">Account</a></li>
         <li><a href="#">Logout</a></li>
         </ul>
     </header>
 
 
-    <!-- WRAPPER beginning-->
+    <!-- WRAPPER -->
     <div class="row">
         <div class="col-md-2">
             <ul id='sidebar'>
@@ -47,73 +47,351 @@
             </ul>
         </div>
     
-        <div class="col-md-1"></div>
+        <div class="col-md-1"></div> <!-- filler column -->
 
 
 
 
 
-        <!-- need to modularize this div -->
+        <!-- ADDITION -->
         <div class="col-md-8"  ng-if="addition.active">
             <div id="encapsulate" ng-if="addition.exerciseOne">
                 <div class="row" id="block-question">
                     <div class="col-md-3"></div>
-                    <div class="col-md-3" id="question">
-                        <h5>3 + 5</h5>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is 2 + 3</h2>
                     </div>
-                    <div class="col-md-1">
-                        <h5>=</h5>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextAdditionExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
                     </div>
-                    <div class="col-md-2" id="answer">
-                        <h5>{{   }}</h5>
-                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="addition.exerciseTwo">
+                <div class="row" id="block-question">
                     <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE TWO is 5 + 9</h2>
+                    </div>
                 </div>
-
+                <br><br><br><br><br><br><br><br><br><br>
                 <div class="row">
-                    <ul>
-                        <li ng-repeat="choice in exercises.choices">
-                            <div class="col-md-3" class="choice" id="choice1">
-                                {{ choice }}
-                            </div>
-                        </li>
-                    </ul> 
-                   <!--  <div class="col-md-3">
-                        <div class="choice" id="choice2">
-                            <p>8</p>
-                        </div>
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextAdditionExercise('exerciseTwo', 'exerciseThree')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
                     </div>
-                    <div class="col-md-3">
-                        <div class="choice" id="choice3">
-                            <p>3</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="choice" id="choice4">
-                            <p>4</p>
-                        </div>
-                    </div> -->
                 </div>
-                    
-                <div class="row">
-                    <div class="col-md-9"></div>
-                    <div class="col-md-2" id="next-button">
-                        <button type="button" ng-click="nextAdditionExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link" id="next-exercise">Next Exercise<span class="glyphicon glyphicon-circle-arrow-right"></span>
-                        </button>
+            </div>
+
+            <div id="encapsulate" ng-if="addition.exerciseThree">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE THREE is 1 + 6</h2>
                     </div>
-                    <div class="col-md-1"></div>
-                </div> 
-            </div>  
-        </div>
-        <!-- need to modularize this div -->
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextAdditionExercise('exerciseThree', 'exerciseFour')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of ADDITION -->
 
 
 
+        <!-- SUBTRACTION -->
+        <div class="col-md-8"  ng-if="subtraction.active">
+            <div id="encapsulate" ng-if="subtraction.exerciseOne">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is 4 - 1</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextSubtractionExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
 
-        <div class="col-md-1"></div>
-    </div>
-    <!-- WRAPPER end -->
+            <div id="encapsulate" ng-if="subtraction.exerciseTwo">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is 7 - 5</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextSubtractionExercise('exerciseTwo', 'exerciseThree')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div>
 
+            <div id="encapsulate" ng-if="subtraction.exerciseThree">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is 9 - 1</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextSubtractionExercise('exerciseThree', 'exerciseFour')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of SUBTRACTION -->
+
+
+
+        <!-- PATTERNS -->
+        <div class="col-md-8"  ng-if="patterns.active">
+            <div id="encapsulate" ng-if="patterns.exerciseOne">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is red,red,blue,red,red, ______</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextPatternsExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="patterns.exerciseTwo">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE TWO is red, green, blue, red, green, ______</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextPatternsExercise('exerciseTwo', 'exerciseThree')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="encapsulate" ng-if="patterns.exerciseThree">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE THREE is red, blue, red, ______</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextPatternsExercise('exerciseThree', 'exerciseFour')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of PATTERNS -->
+
+
+
+        <!-- COUNTING -->
+        <div class="col-md-8"  ng-if="counting.active">
+            <div id="encapsulate" ng-if="counting.exerciseOne">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is "How many circles?"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextCountingExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="counting.exerciseTwo">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE TWO is "How many coins are there?"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextCountingExercise('exerciseTwo', 'exerciseThree')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="counting.exerciseThree">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE THREE is "Are there 2 birds or 3 birds?"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextCountingExercise('exerciseThree', 'exerciseFour')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+        </div> <!-- end of COUNTING -->
+
+
+
+        <!-- MEASUREMENTS -->
+        <div class="col-md-8"  ng-if="measurements.active">
+            <div id="encapsulate" ng-if="measurements.exerciseOne">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is "Which rocket is bigger?"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextMeasurementsExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="measurements.exerciseTwo">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE TWO is "Choose the shorter giraffe:"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextMeasurementsExercise('exerciseTwo', 'exerciseThree')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="measurements.exerciseThree">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE THREE is "Which building is shorter?"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextMeasurementsExercise('exerciseThree', 'exerciseFour')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+        </div> <!-- end of MEASUREMENTS -->
+
+
+
+        <!-- SHAPES -->
+        <div class="col-md-8"  ng-if="shapes.active">
+            <div id="encapsulate" ng-if="shapes.exerciseOne">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE ONE is "Which one is a circle?"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextShapesExercise('exerciseOne', 'exerciseTwo')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="shapes.exerciseTwo">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE TWO is "Choose the triangle."</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextShapesExercise('exerciseTwo', 'exerciseThree')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="encapsulate" ng-if="shapes.exerciseThree">
+                <div class="row" id="block-question">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="question">
+                        <h2>EXERCISE THREE is "Which one of them is a square?"</h2>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br>
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                        <button type="button" ng-click="nextShapesExercise('exerciseThree', 'exerciseFour')" class="btn btn-link">Next Exercise <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+                    </div>
+                </div>
+            </div> 
+        </div> <!-- end of SHAPES -->
+
+
+
+        <div class="col-md-1"></div> <!-- filler column -->
+    </div> <!-- end of WRAPPER -->      
+               
 </body>
 
 </html>

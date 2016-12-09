@@ -1,4 +1,4 @@
-ElevateApp.controller('HomeCtrl', ['$scope', function($scope) {
+ElevateApp.controller('ExerciseCtrl', ['$scope', function($scope) {
 	
 	$scope.addition = {
 		active: false,
@@ -110,16 +110,40 @@ ElevateApp.controller('HomeCtrl', ['$scope', function($scope) {
 		$scope.subtraction[next] = true;
 	};
 
-	$scope.nextMultiplicationExercise = function (current, next) {
+	// $scope.nextMultiplicationExercise = function (current, next) {
+	// 	if(!next) return;
+	// 	$scope.multiplication[current] = false;
+	// 	$scope.multiplication[next] = true;
+	// };
+
+	// $scope.nextDivisionExercise = function (current, next) {
+	// 	if(!next) return;
+	// 	$scope.division[current] = false;
+	// 	$scope.division[next] = true;
+	// };
+
+	$scope.nextPatternsExercise = function (current, next) {
 		if(!next) return;
-		$scope.multiplication[current] = false;
-		$scope.multiplication[next] = true;
+		$scope.patterns[current] = false;
+		$scope.patterns[next] = true;
 	};
 
-	$scope.nextDivisionExercise = function (current, next) {
+	$scope.nextCountingExercise = function (current, next) {
 		if(!next) return;
-		$scope.division[current] = false;
-		$scope.division[next] = true;
+		$scope.counting[current] = false;
+		$scope.counting[next] = true;
+	};
+
+	$scope.nextMeasurementsExercise = function (current, next) {
+		if(!next) return;
+		$scope.measurements[current] = false;
+		$scope.measurements[next] = true;
+	};
+
+	$scope.nextShapesExercise = function (current, next) {
+		if(!next) return;
+		$scope.shapes[current] = false;
+		$scope.shapes[next] = true;
 	};
 	
 }]); //end of ElevateApp controller
