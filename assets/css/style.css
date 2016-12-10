@@ -18,12 +18,12 @@ a {
 }
 
 .row {
-	padding-top: 5px;
+	padding-top: 40px;
 
 }
 
 h1 {
-	font-size: 80px;
+	font-size: 100px;
 	text-align: center;
 	/*font-family: 'Raleway', sans-serif;*/
 	/*font-family: 'Play', sans-serif;*/
@@ -47,8 +47,8 @@ h5 {
 }
 
 #sidebar {
-	margin-left: -20px;
-	margin-top: 60px;
+	margin-left: -40px;
+	margin-top: 109px;
 }
 
 .sidebar-buttons {
@@ -73,7 +73,7 @@ h5 {
 	width: 799px;
 	height: 500px;
 	border: 3px solid black;
-	margin: 40px 0 0 50px;
+	margin: 80px 0 0 50px;
 /*	z-index: -1;*/
 }
 
@@ -235,6 +235,7 @@ h5 {
 	width: 20%;
 	margin-top: 50px;
 }
+
 #greenplanet, #purpleplanet, #redplanet {
 	display: inline;
 	margin-right: 280px;
