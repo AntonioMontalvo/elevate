@@ -33,7 +33,7 @@ db.once('open', function () {
   console.log('Mongoose connection successful.');
 });
 
-var Result = require('models/result.js');
+var Result = require('./models/result.js');
 
 //--------------------------------------------------
 // Main Route. 

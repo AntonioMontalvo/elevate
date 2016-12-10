@@ -39,14 +39,10 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
         exerciseThree: false
     }
 
-    $scope.exercises = [
+    $scope.exercisesMath = [
         { 'name': '3 + 2', 'result': 5, 'type': 'Addition' },
         { 'name': '5 + 9', 'result': 14, 'type': 'Addition' },
-        { 'name': '1 + 9', 'result': 10, 'type': 'Addition' },
-        { 'name': '9 + 9', 'result': 18, 'type': 'Addition' },
-        { 'name': '4 - 1', 'result': 3, 'type': 'Subtraction' },
-        { 'name': '7 - 5', 'result': 2, 'type': 'Subtraction' },
-        { 'name': '9 - 1', 'result': 8, 'type': 'Subtraction' },
+        { 'name': '1 + 9', 'result': 10, 'type': 'Addition' }
         // {'name': '2 * 1','result': '2', 'type': 'Multiplication'},
         // {'name': '4 * 4','result': '16', 'type': 'Multiplication'},
         // {'name': '2 * 4','result': '8', 'type': 'Multiplication'},
@@ -54,6 +50,39 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
         // {'name': '4 / 2','result': '2', 'type': 'Division'},
         // {'name': '6 / 2','result': '3', 'type': 'Division'}
     ];
+
+    $scope.exercisesSubtraction = [
+        { 'name': '4 - 1', 'result': 3, 'type': 'Subtraction' },
+        { 'name': '7 - 5', 'result': 2, 'type': 'Subtraction' },
+        { 'name': '9 - 1', 'result': 8, 'type': 'Subtraction' }
+    ];
+
+    $scope.exercisesPatterns = [
+        {},
+        {},
+        {}
+    ];
+
+    $scope.exercisesCounting = [
+        {},
+        {},
+        {}
+    ];
+
+    $scope.exercisesShapes = [
+        {},
+        {},
+        {}
+    ];
+
+    $scope.exercisesMeasurements = [
+        {},
+        {},
+        {}
+    ];
+
+
+
     $scope.areasOfKnowledge = [
         { 'name': 'Addition', 'href': '/addition', 'scope': $scope.addition },
         { 'name': 'Subtraction', 'href': '/subtraction', 'scope': $scope.subtraction },
@@ -65,7 +94,7 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
 
 
     // ******************************************
-    // JAKE 
+    // JAKE beginning
     // ******************************************
 
 
@@ -73,23 +102,36 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     $scope.kidChoice = null;
     $scope.commentToKid = null;
     $scope.goodToMoveOn = false;
+    $scope.exercisesArrayIndex = 0;
+
+
 
     $scope.choicesFunc = function(num) {
         $scope.kidChoice = num;
+        $scope.exercisesArrayIndex++;
     };
 
+
+    $scope.lastQuestionNextButton = function(){
+        $scope.exercisesArrayIndex = 0;
+    };
 
 
 
 
     $scope.delayer = function(current, next, cb) {
-        $timeout(function() { return cb(current, next) }, 3000);
+        $timeout(function() { return cb(current, next); }, 3000);
+        $timeout(function() { $scope.kidChoice = null; }, 3000);
+        $timeout(function() { $scope.commentToKid = null; }, 3000);
     };
 
 
 
-    $scope.testResult = function(kidChoice) {
-        if (kidChoice === $scope.exercises[0].result) {
+
+
+
+    $scope.testResultMath = function(kc) {
+        if (kc === $scope.exercisesMath[$scope.exercisesArrayIndex - 1].result) {
             $scope.commentToKid = 'You are correct!';
             console.log('correct')
             $scope.goodToMoveOn = true;
@@ -99,12 +141,27 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
         }
     };
 
+    $scope.testResultSubtraction = function(kc) {
+        if (kc === $scope.exercisesSubtraction[$scope.exercisesArrayIndex - 1].result) {
+            $scope.commentToKid = 'You are correct!';
+            console.log('correct')
+            $scope.goodToMoveOn = true;
+        } else {
+            console.log('wrong')
+            $scope.commentToKid = 'WRONG';
+        }
+    };
+
+   
+
+
+     
 
 
 
 
     // ******************************************
-    // JAKE 
+    // JAKE end
     // ******************************************
 
 
