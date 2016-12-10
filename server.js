@@ -33,11 +33,30 @@ db.once('open', function () {
   console.log('Mongoose connection successful.');
 });
 
+var Result = require('models/result.js');
+
 //--------------------------------------------------
 // Main Route. 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 })
+
+// Handle form submission, save submission to mongo
+app.post('/submit', function(req, res) {
+  console.log(req.body);
+  // insert the note into the notes collection
+  db.Result.insert(req.body, function(err, saved) {
+    // log any errors
+    if (err) {
+      console.log(err);
+    } 
+    // otherwise, send the note back to the browser.
+    // this will fire off the success function of the ajax request
+    else {
+      res.send(saved);
+    }
+  });
+});
 
 
 app.listen(PORT, function(){
