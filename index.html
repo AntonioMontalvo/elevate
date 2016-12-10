@@ -55,23 +55,23 @@
             <div ng-if="addition.exerciseOne" id="encapsulate">
                 <div class='row'>
                     <div class="col-xs-3">
-                        <div class="choice" id="choice1">
+                        <div ng-click="choicesFunc(1)" class="choice" id="choice1">
                             <p>1</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div class="choice" id="choice2">
+                        <div ng-click="choicesFunc(8)" class="choice" id="choice2">
                             <p>8</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div class="choice" id="choice3">
+                        <div ng-click="choicesFunc(3)" class="choice" id="choice3">
                             <p>3</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div class="choice" id="choice4">
-                            <p>4</p>
+                        <div ng-click="choicesFunc(5)" class="choice" id="choice4">
+                            <p>5</p>
                         </div>
                     </div>
                 </div>
@@ -79,25 +79,35 @@
                     <div class="row">
                         <div class="col-xs-3"></div>
                         <div class="col-xs-3" id="question">
-                            <h5>{{exercises[0].name}}</h5>
+                            <h5>3 + 2</h5>
                         </div>
                         <div class="col-xs-1">
                             <h5>=</h5>
                         </div>
                         <div class="col-xs-2" id="answer">
-                            <h5> </h5>
+                            <h5>{{kidChoice}}</h5>
                         </div>
                         <div class="col-xs-3"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-9"></div>
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-5">
+                        {{commentToKid}}
+                    </div>
+                    <!-- <div class="col-xs-2" ng-show="goodToMoveOn">
+                        <button>NEXT</button>
+                    </div> -->
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextAdditionExercise('exerciseOne', 'exerciseTwo')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResult(kidChoice);delayer('exerciseOne','exerciseTwo',nextAdditionExercise)" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
             </div>
+            
+
+
+
             <!--  END EXERCISE ONE -->
             <!-- ADDITION EXERCISE TWO -->
             <div ng-if="addition.exerciseTwo" id="encapsulate">
