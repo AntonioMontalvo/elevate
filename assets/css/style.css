@@ -235,10 +235,10 @@ h5 {
 	width: 20%;
 	margin-top: 50px;
 }
-img {
-
-	
-
+#greenplanet, #purpleplanet, #redplanet {
+	display: inline;
+	margin-right: 280px;
 }
+
 
 
