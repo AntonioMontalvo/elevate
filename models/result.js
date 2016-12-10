@@ -5,29 +5,13 @@ var Schema = mongoose.Schema;
 
 // Create User schema
 var ResultSchema = new Schema({
-  addition: {
-    type:Number,
+  answer: {
+    type:Boolean,
     required:true
   },
-  subtraction: {
-    type:Number,
-    required:true
-  },
-  patterns: {
-    type:Number,
-    required:true
-  },
-  grouping: {
-    type:Number,
-    required:true
-  },
-  shapes: {
-    type:Number,
-    required:true
-  },
-  measurements: {
-    type:Number,
-    require:true
+  subject: {
+    type: String,
+    required: true
   }
 });
 
