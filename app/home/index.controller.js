@@ -40,19 +40,19 @@ ElevateApp.controller('HomeCtrl', ['$scope', function($scope) {
 	}
 
 	$scope.exercises = [
-		{'name': 'add 3 + 2','result': '5', 'type': 'Addition'},
-		{'name': 'add 5 + 9','result': '14', 'type': 'Addition'},
-		{'name': 'add 1 + 9','result': '10', 'type': 'Addition'},
-		{'name': 'add 9 + 9','result': '18', 'type': 'Addition'},
-		{'name': 'subtract 4 - 1','result': '3', 'type': 'Subtraction'},
-		{'name': 'subtract 7 - 5','result': '2', 'type': 'Subtraction'},
-		{'name': 'subtract 9 - 1','result': '8', 'type': 'Subtraction'},
-		{'name': 'multiply 2 * 1','result': '2', 'type': 'Multiplication'},
-		{'name': 'multiply 4 * 4','result': '16', 'type': 'Multiplication'},
-		{'name': 'multiply 2 * 4','result': '8', 'type': 'Multiplication'},
-		{'name': 'divide 4 / 4','result': '1', 'type': 'Division'},
-		{'name': 'divide 4 / 2','result': '2', 'type': 'Division'},
-		{'name': 'divide 6 / 2','result': '3', 'type': 'Division'}
+		{'name': '3 + 2','result': '5', 'type': 'Addition'},
+		{'name': '5 + 9','result': '14', 'type': 'Addition'},
+		{'name': '1 + 9','result': '10', 'type': 'Addition'},
+		{'name': '9 + 9','result': '18', 'type': 'Addition'},
+		{'name': '4 - 1','result': '3', 'type': 'Subtraction'},
+		{'name': '7 - 5','result': '2', 'type': 'Subtraction'},
+		{'name': '9 - 1','result': '8', 'type': 'Subtraction'},
+		// {'name': '2 * 1','result': '2', 'type': 'Multiplication'},
+		// {'name': '4 * 4','result': '16', 'type': 'Multiplication'},
+		// {'name': '2 * 4','result': '8', 'type': 'Multiplication'},
+		// {'name': '4 / 4','result': '1', 'type': 'Division'},
+		// {'name': '4 / 2','result': '2', 'type': 'Division'},
+		// {'name': '6 / 2','result': '3', 'type': 'Division'}
 	];
 	$scope.areasOfKnowledge = [
 		{'name': 'Addition', 'href': '/addition' , 'scope': $scope.addition},
