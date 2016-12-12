@@ -1,26 +1,5 @@
-var ElevateApp = angular.module('Elevate', [
-    // 'ui.router'
-]);
+var ElevateApp = angular.module('Elevate', []);
 
-$(document).on('click', "#next-exercise", function() {
-    // AJAX POST call to the submit route on the server. 
-    // This will take the data from the form and send it
-    // to the server. 
-    $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: '/submit',
-            data: {
-                answer: //true or false,
-                subject: $scope.currentField.name// subject
-            }
-        })
-        // If that API call succeeds, 
-        // add the title and a delete button for the note to the page
-        .done(function(data) {
-            console.log(data);
-        });
-});
 
 
 

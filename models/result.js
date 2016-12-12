@@ -1,4 +1,5 @@
  // require mongoose
+console.log("My name is Bernie")
 var mongoose = require('mongoose');
 // create Schema class
 var Schema = mongoose.Schema;
@@ -19,4 +20,5 @@ var ResultSchema = new Schema({
 var Result = mongoose.model('Result', ResultSchema);
 
 // export the model
+console.log("I know")
 module.exports = Result;

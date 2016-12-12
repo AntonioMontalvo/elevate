@@ -99,7 +99,8 @@
                         <button>NEXT</button>
                     </div> -->
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResult(kidChoice);delayer('exerciseOne','exerciseTwo',nextAdditionExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResult(kidChoice);delayer('exerciseOne','exerciseTwo',nextAdditionExercise); postResult(mongoData())" id="next-exercise">Next Exercise</div>
+                        <div ng-click="getResult(activeField)">Addition Results</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -151,7 +152,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextAdditionExercise('exerciseTwo', 'exerciseThree')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextAdditionExercise('exerciseTwo', 'exerciseThree'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -199,7 +200,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextAdditionExercise('exerciseThree', 'exerciseFour')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextAdditionExercise('exerciseThree', 'exerciseFour'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -250,7 +251,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextSubtractionExercise('exerciseOne', 'exerciseTwo')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextSubtractionExercise('exerciseOne', 'exerciseTwo'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -298,7 +299,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextSubtractionExercise('exerciseTwo', 'exerciseThree')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextSubtractionExercise('exerciseTwo', 'exerciseThree'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -346,7 +347,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextSubtractionExercise('exerciseThree', 'exerciseFour')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextSubtractionExercise('exerciseThree', 'exerciseFour'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -402,7 +403,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextPatternsExercise('exerciseOne', 'exerciseTwo')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextPatternsExercise('exerciseOne', 'exerciseTwo'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -454,7 +455,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextPatternsExercise('exerciseTwo', 'exerciseThree')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextPatternsExercise('exerciseTwo', 'exerciseThree'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -506,7 +507,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextPatternsExercise('exerciseThree', 'exerciseFour')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextPatternsExercise('exerciseThree', 'exerciseFour'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -552,7 +553,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextCountingExercise('exerciseOne', 'exerciseTwo')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextCountingExercise('exerciseOne', 'exerciseTwo'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -594,7 +595,7 @@
                 <div class="row">
                     <div class="col-xs-9"></div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="nextCountingExercise('exerciseTwo', 'exerciseThree')" id="next-exercise">Next Exercise</div>
+                        <div ng-click="nextCountingExercise('exerciseTwo', 'exerciseThree'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
@@ -636,7 +637,7 @@
               <div class="row">
                   <div class="col-xs-9"></div>
                   <div class="col-xs-2" id="next-button">
-                      <div ng-click="nextCountingExercise('exerciseThree', 'exerciseFour')" id="next-exercise">Next Exercise</div>
+                      <div ng-click="nextCountingExercise('exerciseThree', 'exerciseFour'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                   </div>
                   <div class="col-xs-1"></div>
               </div>
@@ -685,7 +686,7 @@
             <div class="row">
                 <div class="col-xs-9"></div>
                 <div class="col-xs-2" id="next-button">
-                    <div ng-click="nextShapesExercise('exerciseOne', 'exerciseTwo')" id="next-exercise">Next Exercise</div>
+                    <div ng-click="nextShapesExercise('exerciseOne', 'exerciseTwo'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                 </div>
                 <div class="col-xs-1"></div>
             </div>
@@ -730,7 +731,7 @@
             <div class="row">
                 <div class="col-xs-9"></div>
                 <div class="col-xs-2" id="next-button">
-                    <div ng-click="nextShapesExercise('exerciseTwo', 'exerciseThree')" id="next-exercise">Next Exercise</div>
+                    <div ng-click="nextShapesExercise('exerciseTwo', 'exerciseThree'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                 </div>
                 <div class="col-xs-1"></div>
             </div>
@@ -775,7 +776,7 @@
             <div class="row">
                 <div class="col-xs-9"></div>
                 <div class="col-xs-2" id="next-button">
-                    <div ng-click="nextShapesExercise('exerciseThree', 'exercisefour')" id="next-exercise">Next Exercise</div>
+                    <div ng-click="nextShapesExercise('exerciseThree', 'exercisefour'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                 </div>
                 <div class="col-xs-1"></div>
             </div>
@@ -816,7 +817,7 @@
             <div class="row">
                 <div class="col-xs-9"></div>
                 <div class="col-xs-2" id="next-button">
-                    <div ng-click="nextMeasurementsExercise('exerciseOne', 'exerciseTwo')" id="next-exercise">Next Exercise</div>
+                    <div ng-click="nextMeasurementsExercise('exerciseOne', 'exerciseTwo'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                 </div>
                 <div class="col-xs-1"></div>
             </div>
