@@ -1,6 +1,8 @@
 var ElevateApp = angular.module('Elevate', [
     // 'ui.router'
+    'chart.js'
 ]);
+
 
 // $(document).on('click', "#next-exercise", function() {
 //     // AJAX POST call to the submit route on the server. 
