@@ -1,4 +1,25 @@
-ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+ElevateApp.controller('HomeCtrl', ['$scope', '$timeout',
+    function($scope, $timeout, ) {
+
+    $scope.labels =["Addition", "Subtraction", "Patterns", "Counting", "Shapes", "Measurements"];
+
+    $scope.data = [
+        //this section is where we need to data-bind/import data from database, so we would be displaying their score, ex 5 correct, 9 correct. Will also need to change the legend. 
+        [5, 9, 8, 10, 9, 10]
+
+    $scope.options = [ {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true,
+                    max: 10,
+                    min: 0
+                }
+            }]
+        }
+    }]
+    ];
+
     $scope.addition = {
         active: false,
         exerciseOne: true,
