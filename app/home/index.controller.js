@@ -1,4 +1,4 @@
-ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scope, $timeout, $http) {
     $scope.addition = {
         active: false,
         exerciseOne: true,
@@ -91,11 +91,35 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     // JAKE beginning
     // ******************************************
 
+    // $scope.mongoData = {
+    //     answer: false,
+    //     subject: ""
+    // };
 
+
+
+    //$scope.currentField = {name: "paul"};
 
     $scope.kidChoice = null;
     $scope.commentToKid = null;
     $scope.goodToMoveOn = false;
+
+    $scope.activeField = "";
+    
+    //$scope.mongoData = {
+       // answer: $scope.goodToMoveOn,
+        //subject: $scope.activeField
+    //}
+
+    $scope.mongoData = function() {
+
+        var md = {
+            answer: $scope.goodToMoveOn, //true or false,
+            subject: $scope.activeField // subject
+        };
+        return md;
+    };
+
     $scope.exercisesArrayIndex = 0;
     $scope.currentShape = null;
     $scope.triangleDown_question = {active: false};
@@ -216,7 +240,7 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
 
 
 
-    $scope.currentField = null;
+    // $scope.currentField = null;
 
     //-------------- GRAB THE DATA AND PASS IT TO .fieldOfKnowledge --------------//
     $scope.fieldOfKnowledge = null; //declare the property
@@ -227,7 +251,9 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
         if ($scope.currentField) {
             $scope.currentField.active = false;
         }
+        $scope.activeField = field.name;
         $scope.currentField = field.scope;
+
     }
 
     //----------------
@@ -282,8 +308,40 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     }
 
 
+//Mongo Database
 
+$scope.postResult = function (mongoData) {
+        // AJAX POST call to the submit route on the server. 
+        // This will take the data from the form and send it
+        // console.log($scope.currentField)
+        // to the server. 
+        $http({
+                method: "POST",
+                dataType: "json",
+                url: '/results',
+                data: mongoData
+            })
+            // If that API call succeeds, 
+            // add the title and a delete button for the note to the page
+            .success(function(data) {
+                console.log(data);
+            });
+    };
 
+$scope.getResult = function (activeField){
 
+        $http({
+                method: "GET",
+                dataType: "json",
+                url: '/results/' + activeField
+                //data: res.json
+            })
+            // If that API call succeeds, 
+            // add the title and a delete button for the note to the page
+            .success(function(data) {
+                console.log(data);
+            });  
+
+}
 
 }]);

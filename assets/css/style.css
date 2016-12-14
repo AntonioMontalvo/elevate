@@ -22,15 +22,19 @@ a {
 
 }
 
-h1 {
-	font-size: 100px;
-	text-align: center;
-	/*font-family: 'Raleway', sans-serif;*/
-	/*font-family: 'Play', sans-serif;*/
-	/*font-family: 'Orbitron', sans-serif;*/
-	/*font-family: 'Cinzel', serif;*/
-	/*font-family: 'Comfortaa', cursive;*/
-	font-family: 'Audiowide', cursive;
+h3 {
+	color: limegreen;
+    margin-top: 7px;
+    margin-bottom: 0;
+    margin-left: 953px;
+    font-size: 31px;
+    text-align: center;
+    /* font-family: 'Raleway', sans-serif; */
+    /* font-family: 'Play', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Cinzel', serif; */
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Audiowide', cursive;
 }
 
 h2 {
