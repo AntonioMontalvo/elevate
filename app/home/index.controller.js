@@ -43,12 +43,6 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
         { 'name': '3 + 2', 'result': 5, 'type': 'Addition' },
         { 'name': '5 + 9', 'result': 14, 'type': 'Addition' },
         { 'name': '1 + 9', 'result': 10, 'type': 'Addition' }
-        // {'name': '2 * 1','result': '2', 'type': 'Multiplication'},
-        // {'name': '4 * 4','result': '16', 'type': 'Multiplication'},
-        // {'name': '2 * 4','result': '8', 'type': 'Multiplication'},
-        // {'name': '4 / 4','result': '1', 'type': 'Division'},
-        // {'name': '4 / 2','result': '2', 'type': 'Division'},
-        // {'name': '6 / 2','result': '3', 'type': 'Division'}
     ];
 
     $scope.exercisesSubtraction = [
@@ -57,29 +51,29 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
         { 'name': '9 - 1', 'result': 8, 'type': 'Subtraction' }
     ];
 
-    $scope.exercisesPatterns = [
-        {},
-        {},
-        {}
-    ];
+    // $scope.exercisesPatterns = [
+    //     {},
+    //     {},
+    //     {}
+    // ];
 
     $scope.exercisesCounting = [
-        {},
-        {},
-        {}
+        { 'result': 5 },
+        { 'result': 7 },
+        { 'result': 6 }
     ];
 
-    $scope.exercisesShapes = [
-        {},
-        {},
-        {}
-    ];
+    // $scope.exercisesShapes = [
+    //     {},
+    //     {},
+    //     {}
+    // ];
 
-    $scope.exercisesMeasurements = [
-        {},
-        {},
-        {}
-    ];
+    // $scope.exercisesMeasurements = [
+    //     {},
+    //     {},
+    //     {}
+    // ];
 
 
 
@@ -103,7 +97,33 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     $scope.commentToKid = null;
     $scope.goodToMoveOn = false;
     $scope.exercisesArrayIndex = 0;
+    $scope.currentShape = null;
+    $scope.triangleDown_question = {active: false};
+    $scope.circle_question = {active: false};
+    $scope.triangle_question = {active: false};
+    $scope.square_question = {active: false};
+    $scope.currentQuestion;
 
+    var shapeObj = {
+        circle: $scope.circle_question,
+        triangleDown: $scope.triangleDown_question,
+        triangle: $scope.triangle_question,
+        square: $scope.square_question
+    }
+
+
+    $scope.showSelection = function(shape) {
+        if($scope.currentQuestion) {
+            $scope.currentQuestion.active = false;
+        }
+        shapeObj[shape].active = true;
+        $scope.currentQuestion = shapeObj[shape];
+    }
+
+
+    $scope.myCurrentShape = function(shape) {
+        $scope.currentShape = shape;
+    };
 
 
     $scope.choicesFunc = function(num) {
@@ -112,7 +132,8 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     };
 
 
-    $scope.lastQuestionNextButton = function(){
+
+    $scope.lastQuestionNextButton = function() {
         $scope.exercisesArrayIndex = 0;
     };
 
@@ -120,7 +141,8 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
 
 
     $scope.delayer = function(current, next, cb) {
-        $timeout(function() { return cb(current, next); }, 3000);
+        $timeout(function() {
+            return cb(current, next); }, 3000);
         $timeout(function() { $scope.kidChoice = null; }, 3000);
         $timeout(function() { $scope.commentToKid = null; }, 3000);
     };
@@ -133,10 +155,8 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     $scope.testResultMath = function(kc) {
         if (kc === $scope.exercisesMath[$scope.exercisesArrayIndex - 1].result) {
             $scope.commentToKid = 'You are correct!';
-            console.log('correct')
             $scope.goodToMoveOn = true;
         } else {
-            console.log('wrong')
             $scope.commentToKid = 'WRONG';
         }
     };
@@ -144,18 +164,48 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     $scope.testResultSubtraction = function(kc) {
         if (kc === $scope.exercisesSubtraction[$scope.exercisesArrayIndex - 1].result) {
             $scope.commentToKid = 'You are correct!';
-            console.log('correct')
             $scope.goodToMoveOn = true;
         } else {
-            console.log('wrong')
             $scope.commentToKid = 'WRONG';
         }
     };
 
-   
+    $scope.testResultPatterns = function(kc) {
+        if (kc === 1) {
+            $scope.commentToKid = 'You are correct!';
+            $scope.goodToMoveOn = true;
+        } else {
+            $scope.commentToKid = 'WRONG';
+        }
+    };
 
+    $scope.testResultCounting = function(kc) {
+        if (kc === $scope.exercisesCounting[$scope.exercisesArrayIndex - 1].result) {
+            $scope.commentToKid = 'You are correct!';
+            $scope.goodToMoveOn = true;
+        } else {
+            $scope.commentToKid = 'WRONG';
+        }
+    };
 
-     
+    $scope.testResultShapes = function(kc) {
+        if (kc === 1) {
+            $scope.commentToKid = 'You are correct!';
+            $scope.goodToMoveOn = true;
+        } else {
+            $scope.commentToKid = 'WRONG';
+        }
+    };
+
+    $scope.testResultMeasurements = function(kc) {
+        if (kc === 1) {
+            $scope.commentToKid = 'You are correct!';
+            $scope.goodToMoveOn = true;
+        } else {
+            $scope.commentToKid = 'WRONG';
+        }
+    };
+
 
 
 
@@ -178,7 +228,6 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
             $scope.currentField.active = false;
         }
         $scope.currentField = field.scope;
-
     }
 
     //----------------
@@ -197,9 +246,7 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', function($scope, $timeo
     // this functions will switch from current exercise to the next. When called in the html we'll pass it the cureent and next exercise. If trhere is no next exercise it will return. Other that that it changes the state of the current exercise from tru to false and the state of the next exercise from false to true. 
 
 
-    // function x(){
-    // 	setTimeout($scope.nextAdditionExercise($scope.addition.exerciseOne, $scope.addition.exerciseTwo), 3000);
-    // }
+
 
 
 
