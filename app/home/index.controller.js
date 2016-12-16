@@ -191,6 +191,8 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
         $timeout(function() {
             return cb(current, next); }, 3000);
         $timeout(function() { $scope.kidChoice = null; }, 3000);
+        $timeout(function() { $scope.kidChoiceMath = null; }, 3000);
+        $timeout(function() { $scope.kidChoiceSubtraction = null; }, 3000);
         $timeout(function() { $scope.commentToKid = null; }, 3000);
     };
 
