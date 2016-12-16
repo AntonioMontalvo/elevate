@@ -38,6 +38,10 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
         exerciseTwo: false,
         exerciseThree: false
     }
+    $scope.results = {
+        active: false,
+        exerciseOne: true
+    }
 
     $scope.exercisesMath = [
         { 'name': '3 + 2', 'result': 5, 'type': 'Addition' },
@@ -83,7 +87,8 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
         { 'name': 'Patterns', 'href': '/patterns', 'scope': $scope.patterns },
         { 'name': 'Counting', 'href': '/counting', 'scope': $scope.counting },
         { 'name': 'Shapes', 'href': '/shapes', 'scope': $scope.shapes },
-        { 'name': 'Measurements', 'href': '/measurements', 'scope': $scope.measurements }
+        { 'name': 'Measurements', 'href': '/measurements', 'scope': $scope.measurements },
+        { 'name': 'Results', 'href': '/results', 'scope': $scope.results }
     ];
 
 
@@ -98,11 +103,13 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
 
 
 
-    //$scope.currentField = {name: "paul"};
-
     $scope.kidChoice = null;
+
+    $scope.parentResult = null;
+
     $scope.kidChoiceMath = null;
     $scope.kidChoiceSubtraction = null;
+
     $scope.commentToKid = null;
     $scope.goodToMoveOn = false;
 
@@ -157,6 +164,11 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
         $scope.exercisesArrayIndex++;
     };
 
+
+    // $scope.parentchoicesFunc = function(subject) {
+    //     $scope.parentChoice = subject;
+    // };
+
     $scope.choicesFuncMath = function(num){
         $scope.kidChoiceMath = num;
     };
@@ -164,6 +176,7 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
     $scope.choicesFuncSubtraction = function(num){
         $scope.kidChoiceSubtraction = num;
     };
+
 
 
 
@@ -357,7 +370,6 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
 //Mongo Database
 
 $scope.postResult = function (mongoData) {
-        // AJAX POST call to the submit route on the server. 
         // This will take the data from the form and send it
         // console.log($scope.currentField)
         // to the server. 
@@ -368,7 +380,6 @@ $scope.postResult = function (mongoData) {
                 data: mongoData
             })
             // If that API call succeeds, 
-            // add the title and a delete button for the note to the page
             .success(function(data) {
                 console.log(data);
             });
@@ -383,9 +394,12 @@ $scope.getResult = function (activeField){
                 //data: res.json
             })
             // If that API call succeeds, 
-            // add the title and a delete button for the note to the page
             .success(function(data) {
                 console.log(data);
+               var numberCorrect = data.length;
+                var percentageCorrect = (numberCorrect/3) * 100;
+                console.log(percentageCorrect)
+                $scope.parentResult = percentageCorrect.toFixed(2) + " percent correct";
             });  
 
 }

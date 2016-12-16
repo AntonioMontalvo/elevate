@@ -62,7 +62,7 @@ app.get('/results/:subject', function(req, res){
   // // prepare a query that finds the matching one in our db...
   Result.find({
      subject: req.params.subject,
-     answer: false
+     answer: true
   }).exec(function(err, doc) {
      //log any errors
      if (err) {
@@ -70,12 +70,13 @@ app.get('/results/:subject', function(req, res){
      }
      // otherwise, send the doc to the browser as a json object
      else {
-         //res.json(doc);
+         res.json(doc);
 
          var numberCorrect = doc.length;
+         console.log(numberCorrect)
          var percentageCorrect = (numberCorrect/3) * 100;
          console.log(percentageCorrect)
-         res.json(percentageCorrect)
+         console.log(percentageCorrect)
      }
  });
 
