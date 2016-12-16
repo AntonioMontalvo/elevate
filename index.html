@@ -41,7 +41,6 @@
             <li><a href="#">Logout</a></li>
             <h3>Elevate</h3>
         </ul>
-
     </header>
     <div class="row">
         <div class="col-xs-2">
@@ -62,22 +61,22 @@
             <div ng-if="addition.exerciseOne" id="encapsulate">
                 <div class='row'>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(1);tog=1" class="choice" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1;choicesFuncMath(1)" class="choice" id="choice1">
                             <p>1</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(8);tog=2" class="choice" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(2);tog=2;choicesFuncMath(8)" class="choice" id="choice2">
                             <p>8</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(3);tog=3" class="choice" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(2);tog=3;choicesFuncMath(3)" class="choice" id="choice3">
                             <p>3</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(5);tog=4" class="choice" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(1);tog=4;choicesFuncMath(5)" class="choice" id="choice4">
                             <p>5</p>
                         </div>
                     </div>
@@ -92,7 +91,7 @@
                             <h5>=</h5>
                         </div>
                         <div class="col-xs-2" id="answer">
-                            <h5>{{kidChoice}}</h5>
+                            <h5>{{kidChoiceMath}}</h5>
                         </div>
                         <div class="col-xs-3"></div>
                     </div>
@@ -117,22 +116,22 @@
             <div ng-if="addition.exerciseTwo" id="encapsulate">
                 <div class="row">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(14);tog=1" class="choice" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(1);tog=1;choicesFuncMath(14)" class="choice" id="choice1">
                             <p>14</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(8);tog=2" class="choice" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(2);tog=2;choicesFuncMath(8)" class="choice" id="choice2">
                             <p>8</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(1);tog=3" class="choice" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(2);tog=3;choicesFuncMath(1)" class="choice" id="choice3">
                             <p>1</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(9);tog=4" class="choice" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(2);tog=4;choicesFuncMath(9)" class="choice" id="choice4">
                             <p>9</p>
                         </div>
                     </div>
@@ -147,7 +146,7 @@
                             <h5>=</h5>
                         </div>
                         <div class="col-xs-2" id="answer">
-                            <h5>{{kidChoice}}</h5>
+                            <h5>{{kidChoiceMath}}</h5>
                         </div>
                         <div class="col-xs-3"></div>
                     </div>
@@ -172,22 +171,22 @@
             <div ng-if="addition.exerciseThree" id="encapsulate">
                 <div class="row">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(1);tog=1" class="choice" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1;choicesFuncMath(1)" class="choice" id="choice1">
                             <p>1</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(9);tog=2" class="choice" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(2);tog=2;choicesFuncMath(9)" class="choice" id="choice2">
                             <p>9</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(10);tog=3" class="choice" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(1);tog=3;choicesFuncMath(10)" class="choice" id="choice3">
                             <p>10</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(6);tog=4" class="choice" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(2);tog=4;choicesFuncMath(6)" class="choice" id="choice4">
                             <p>6</p>
                         </div>
                     </div>
@@ -202,7 +201,7 @@
                             <h5>=</h5>
                         </div>
                         <div class="col-xs-2" id="answer">
-                            <h5>{{kidChoice}}</h5>
+                            <h5>{{kidChoiceMath}}</h5>
                         </div>
                         <div class="col-xs-3"></div>
                     </div>
@@ -236,22 +235,22 @@
             <div ng-if="subtraction.exerciseOne" id="encapsulate">
                 <div class="row">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(1);tog=1" class="choice" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1;choicesFuncSubtraction(1)" class="choice" id="choice1">
                             <p>1</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(3);tog=2" class="choice" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(1);tog=2;choicesFuncSubtraction(3)" class="choice" id="choice2">
                             <p>3</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(73);tog=3" class="choice" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(2);tog=3;choicesFuncSubtraction(73)" class="choice" id="choice3">
                             <p>73</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(4);tog=4" class="choice" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(2);tog=4;choicesFuncSubtraction(4)" class="choice" id="choice4">
                             <p>4</p>
                         </div>
                     </div>
@@ -266,7 +265,7 @@
                             <h5>=</h5>
                         </div>
                         <div class="col-xs-2" id="answer">
-                            <h5>{{kidChoice}}</h5>
+                            <h5>{{kidChoiceSubtraction}}</h5>
                         </div>
                         <div class="col-xs-3"></div>
                     </div>
@@ -290,22 +289,22 @@
             <div ng-if="subtraction.exerciseTwo" id="encapsulate">
                 <div class="row">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(10);tog=1" class="choice" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1;choicesFuncSubtraction(10)" class="choice" id="choice1">
                             <p>10</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(33);tog=2" class="choice" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(2);tog=2;choicesFuncSubtraction(33)" class="choice" id="choice2">
                             <p>33</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(2);tog=3" class="choice" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(1);tog=3;choicesFuncSubtraction(2)" class="choice" id="choice3">
                             <p>2</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(4);tog=4" class="choice" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(2);tog=4;choicesFuncSubtraction(4)" class="choice" id="choice4">
                             <p>4</p>
                         </div>
                     </div>
@@ -320,7 +319,7 @@
                             <h5>=</h5>
                         </div>
                         <div class="col-xs-2" id="answer">
-                            <h5>{{kidChoice}}</h5>
+                            <h5>{{kidChoiceSubtraction}}</h5>
                         </div>
                         <div class="col-xs-3"></div>
                     </div>
@@ -345,22 +344,22 @@
             <div ng-if="subtraction.exerciseThree" id="encapsulate">
                 <div class="row">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(0);tog=1" class="choice" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1;choicesFuncSubtraction(0)" class="choice" id="choice1">
                             <p>0</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(3);tog=2" class="choice" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(2);tog=2;choicesFuncSubtraction(3)" class="choice" id="choice2">
                             <p>3</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(22);tog=3" class="choice" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(2);tog=3;choicesFuncSubtraction(22)" class="choice" id="choice3">
                             <p>22</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(8);tog=4" class="choice" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(1);tog=4;choicesFuncSubtraction(8)" class="choice" id="choice4">
                             <p>8</p>
                         </div>
                     </div>
@@ -375,7 +374,7 @@
                             <h5>=</h5>
                         </div>
                         <div class="col-xs-2" id="answer">
-                            <h5>{{kidChoice}}</h5>
+                            <h5>{{kidChoiceSubtraction}}</h5>
                         </div>
                         <div class="col-xs-3"></div>
                     </div>
@@ -386,11 +385,7 @@
                         {{commentToKid}}
                     </div>
                     <div class="col-xs-2" id="next-button">
-
-
-
                         <div ng-click="testResultSubtraction(kidChoice);postResult(mongoData());delayer('exerciseThree','exerciseFour',nextSubtractionExercise)" id="next-exercise">Next Exercise</div>
-
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -471,16 +466,16 @@
             <div ng-if="patterns.exerciseTwo" id="encapsulate">
                 <div class="row" id="options">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatternsTriangleUp':tog==1}" ng-click="choicesFunc(2);tog=1" class="triangle"></div>
+                        <div ng-class="{'selectedAnswerPatternsTriangleUp':tog==1}" ng-click="showSelection('triangle');choicesFunc(2);tog=1" class="triangle"></div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatterns':tog==2}" ng-click="choicesFunc(2);tog=2" class="circle"></div>
+                        <div ng-class="{'selectedAnswerPatterns':tog==2}" ng-click="showSelection('circle');choicesFunc(2);tog=2" class="circle"></div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatternsTriangleDown':tog==3}" ng-click="choicesFunc(1);tog=3" class="triangle-down"></div>
+                        <div ng-class="{'selectedAnswerPatternsTriangleDown':tog==3}" ng-click="showSelection('triangleDown');choicesFunc(1);tog=3" class="triangle-down"></div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatterns':tog==4}" ng-click="choicesFunc(2);tog=4" class="square"></div>
+                        <div ng-class="{'selectedAnswerPatterns':tog==4}" ng-click="showSelection('square');choicesFunc(2);tog=4" class="square"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -506,7 +501,14 @@
                         <div class="col-xs-1">
                             <div class="circle_question"></div>
                         </div>
-                        <div class="col-xs-1" id="empty-space"></div>
+                        <div class="col-xs-1" id="empty-space">
+                            <div>
+                                <div ng-show="circle_question.active" class="circle_question"></div>
+                                <div ng-show="triangle_question.active" class="triangle_question"></div>
+                                <div ng-show="square_question.active" class="square_question"></div>
+                                <div ng-show="triangleDown_question.active" class="triangle-down_question"></div>
+                            </div>
+                        </div>
                         <div class="col-xs-3"></div>
                     </div>
                 </div>
@@ -526,16 +528,16 @@
             <div ng-if="patterns.exerciseThree" id="encapsulate">
                 <div class="row" id="options">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatterns':tog==1}" ng-click="choicesFunc(2);tog=1" class="square"></div>
+                        <div ng-class="{'selectedAnswerPatterns':tog==1}" ng-click="showSelection('square');choicesFunc(2);tog=1" class="square"></div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatternsTriangleUp':tog==2}" ng-click="choicesFunc(2);tog=2" class="triangle"></div>
+                        <div ng-class="{'selectedAnswerPatternsTriangleUp':tog==2}" ng-click="showSelection('triangle');choicesFunc(2);tog=2" class="triangle"></div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatternsTriangleDown':tog==3}" ng-click="choicesFunc(1);tog=3" class="triangle-down"></div>
+                        <div ng-class="{'selectedAnswerPatternsTriangleDown':tog==3}" ng-click="showSelection('triangleDown');choicesFunc(1);tog=3" class="triangle-down"></div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswerPatterns':tog==4}" ng-click="choicesFunc(2);tog=4" class="circle"></div>
+                        <div ng-class="{'selectedAnswerPatterns':tog==4}" ng-click="showSelection('circle');choicesFunc(2);tog=4" class="circle"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -561,7 +563,14 @@
                         <div class="col-xs-1">
                             <div class="triangle-down_question"></div>
                         </div>
-                        <div class="col-xs-1" id="empty-space"></div>
+                        <div class="col-xs-1" id="empty-space">
+                            <div>
+                                <div ng-show="circle_question.active" class="circle_question"></div>
+                                <div ng-show="triangle_question.active" class="triangle_question"></div>
+                                <div ng-show="square_question.active" class="square_question"></div>
+                                <div ng-show="triangleDown_question.active" class="triangle-down_question"></div>
+                            </div>
+                        </div>
                         <div class="col-xs-3"></div>
                     </div>
                 </div>
@@ -600,22 +609,22 @@
                 </div>
                 <div class="row" id="after-counting">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(1);tog=1" class="choice stars" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1" class="choice stars" id="choice1">
                             <p>1</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(5);tog=2" class="choice stars" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(1);tog=2" class="choice stars" id="choice2">
                             <p>5</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(3);tog=3" class="choice stars" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(2);tog=3" class="choice stars" id="choice3">
                             <p>3</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(4);tog=4" class="choice stars" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(2);tog=4" class="choice stars" id="choice4">
                             <p>4</p>
                         </div>
                     </div>
@@ -645,22 +654,22 @@
                 </div>
                 <div class="row" id="after-counting">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(6);tog=1" class="choice stars" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1" class="choice stars" id="choice1">
                             <p>6</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(8);tog=2" class="choice stars" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(2);tog=2" class="choice stars" id="choice2">
                             <p>8</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(10);tog=3" class="choice stars" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(2);tog=3" class="choice stars" id="choice3">
                             <p>10</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(7);tog=4" class="choice stars" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(1);tog=4" class="choice stars" id="choice4">
                             <p>7</p>
                         </div>
                     </div>
@@ -679,94 +688,37 @@
 
         <!--  END EXERCISE TWO -->
         <!-- COUNTING EXERCISE THREE -->
-          <div ng-if="counting.exerciseThree" id="encapsulate">
-              <div class="row">
-                  <div class="col-xs-12">
+            <div ng-if="counting.exerciseThree" id="encapsulate">
+                <div class="row">
+                    <div class="col-xs-12">
                       <div id="constellation"><img src="../../../assets/images/c7.jpg"></div>
-                  </div>
-              </div>
-              <div class="row" id="counting">
-                  <div class="col-xs-12">
-                      <h2>How many stars are there?</h2></div>
-              </div>
-              <div class="row" id="after-counting">
-                  <div class="col-xs-3">
-                      <div class="choice stars" id="choice1">
-                          <p>18</p>
-                      </div>
-                  </div>
-                  <div class="col-xs-3">
-                      <div class="choice stars" id="choice2">
-                          <p>9</p>
-                      </div>
-                  </div>
-                  <div class="col-xs-3">
-                      <div class="choice stars" id="choice3">
-                          <p>6</p>
-                      </div>
-                  </div>
-                  <div class="col-xs-3">
-                      <div class="choice stars" id="choice4">
-                          <p>11</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-xs-9"></div>
-                  <div class="col-xs-2" id="next-button">
-                      <div ng-click="nextCountingExercise('exerciseThree', 'exerciseFour'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
-                  </div>
-                  <div class="col-xs-1"></div>
-              </div>
-          </div>
-        <!--  END EXERCISE THREE -->
-    </div>
-<!-- **************************************** -->
-        <!-- end of COUNTING -->
-<!-- **************************************** -->
-
-<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
-<!-- **************************************** -->
-        <!-- beginning of SHAPES -->
-<!-- **************************************** -->
-    <div ng-if="shapes.active" class="col-xs-8">
-        <!-- SHAPES EXERCISE ONE -->
-        <div ng-if="shapes.exerciseOne" id="encapsulate">
-            <div class="row" id="options">
-                <div class="col-xs-4">
-                    <div class="circle"></div>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <div class="triangle"></div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="square"></div>
 
-                </div>
                 <div class="row" id="counting">
                     <div class="col-xs-12">
                         <h2>How many stars are there?</h2>
                     </div>
                 </div>
+
                 <div class="row" id="after-counting">
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(18);tog=1" class="choice stars" id="choice1">
+                        <div ng-class="{'selectedAnswer':tog==1}" ng-click="choicesFunc(2);tog=1" class="choice stars" id="choice1">
                             <p>18</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(9);tog=2" class="choice stars" id="choice2">
+                        <div ng-class="{'selectedAnswer':tog==2}" ng-click="choicesFunc(2);tog=2" class="choice stars" id="choice2">
                             <p>9</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(6);tog=3" class="choice stars" id="choice3">
+                        <div ng-class="{'selectedAnswer':tog==3}" ng-click="choicesFunc(1);tog=3" class="choice stars" id="choice3">
                             <p>6</p>
                         </div>
                     </div>
                     <div class="col-xs-3">
-                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(11);tog=4" class="choice stars" id="choice4">
+                        <div ng-class="{'selectedAnswer':tog==4}" ng-click="choicesFunc(2);tog=4" class="choice stars" id="choice4">
                             <p>11</p>
                         </div>
                     </div>
@@ -781,13 +733,18 @@
                     <div class="col-xs-3"></div>
 
                 </div>
+
             </div>
-            <!--  END EXERCISE THREE -->
+
+        <!--  END EXERCISE THREE -->
         </div>
-        <!-- **************************************** -->
+<!-- **************************************** -->
         <!-- end of COUNTING -->
-        <!-- **************************************** -->
-        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- **************************************** -->
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
         <!-- **************************************** -->
         <!-- beginning of SHAPES -->
         <!-- **************************************** -->
@@ -832,7 +789,7 @@
                     <div class="col-xs-2"></div>
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultShapes(kidChoice);delayer('exerciseOne', 'exerciseTwo', nextShapesExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultShapes(kidChoice);postResult(mongoData());delayer('exerciseOne', 'exerciseTwo', nextShapesExercise)" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -856,30 +813,8 @@
                     <div class="col-xs-12" id="prompt">
                         <h2>Which shape is in the center?</h2>
                     </div>
-
-            </div>
-            <div class="row">
-                <div class="col-xs-9"></div>
-                <div class="col-xs-2" id="next-button">
-                    <div ng-click="nextShapesExercise('exerciseTwo', 'exerciseThree'); postResult(mongoData())" id="next-exercise">Next Exercise</div>
                 </div>
-                <div class="col-xs-1"></div>
-            </div>
-        </div>
-        <!--  END EXERCISE TWO -->
-        <!-- SHAPES EXERCISE THREE -->
-        <div ng-if="shapes.exerciseThree" id="encapsulate">
-            <div class="row" id="options">
-                <div class="col-xs-4">
-                    <div class="circle"></div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="square"></div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="triangle"></div>
-
-                </div>
+                
                 <div class="block-question">
                     <div class="row">
                         <div class="col-xs-2"></div>
@@ -902,7 +837,7 @@
                     <div class="col-xs-2"></div>
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultShapes(kidChoice);delayer('exerciseTwo', 'exerciseThree', nextShapesExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultShapes(kidChoice);postResult(mongoData());delayer('exerciseTwo', 'exerciseThree', nextShapesExercise)" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -952,10 +887,8 @@
                         <div ng-click="testResultShapes(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextShapesExercise)" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
-
-            </div>
- 
-            <!--  END EXERCISE THREE -->
+                </div>
+            </div><!--  END EXERCISE THREE -->
         </div>
         <!-- **************************************** -->
         <!-- end of SHAPES -->
@@ -997,7 +930,7 @@
                     <div class="col-xs-2"></div>
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultMeasurements(kidChoice);delayer('exerciseOne', 'exerciseTwo', nextMeasurementsExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultMeasurements(kidChoice);postResult(mongoData());delayer('exerciseOne', 'exerciseTwo', nextMeasurementsExercise)" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -1035,7 +968,7 @@
                     <div class="col-xs-2"></div>
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultMeasurements(kidChoice);delayer('exerciseTwo', 'exerciseThree', nextMeasurementsExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultMeasurements(kidChoice);postResult(mongoData());delayer('exerciseTwo', 'exerciseThree', nextMeasurementsExercise)" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -1077,15 +1010,14 @@
                         <div ng-click="testResultMeasurements(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextMeasurementsExercise)" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
-
                 </div>
-            <!--  END EXERCISE Three -->
+            </div><!--  END EXERCISE Three -->
         </div>
         <!-- **************************************** -->
         <!-- end of MEASUREMENTS -->
         <!-- **************************************** -->
-    </div>
-    <!-- end of the whole damn row -->
+         
+    </div> <!-- end of the whole row -->
 </body>
 
 </html>

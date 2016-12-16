@@ -8,12 +8,13 @@ body{
 
 
 a {
-	color: limegreen;
+	/*color: limegreen;*/
 	font-size: 20px;
 	color:white;
 }
 
 .nav-tabs {
+	padding-top: 10px;
 	border-color: limegreen;
 }
 
@@ -250,9 +251,10 @@ h5 {
 }
 
 .selectedAnswer {
-	border: dotted red 3px;
+	border: dotted red 5px;
 	background-color: lightblue;
 	color: purple;
+	padding-top: 1px;
 }
 
 .selectedAnswerPatterns {

@@ -101,6 +101,8 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
     //$scope.currentField = {name: "paul"};
 
     $scope.kidChoice = null;
+    $scope.kidChoiceMath = null;
+    $scope.kidChoiceSubtraction = null;
     $scope.commentToKid = null;
     $scope.goodToMoveOn = false;
 
@@ -155,6 +157,14 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
         $scope.exercisesArrayIndex++;
     };
 
+    $scope.choicesFuncMath = function(num){
+        $scope.kidChoiceMath = num;
+    };
+
+    $scope.choicesFuncSubtraction = function(num){
+        $scope.kidChoiceSubtraction = num;
+    };
+
 
 
     $scope.lastQuestionNextButton = function() {
@@ -176,8 +186,17 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
 
 
 
+    // $scope.testResultMath = function(kc) {
+    //     if (kc === $scope.exercisesMath[$scope.exercisesArrayIndex - 1].result) {
+    //         $scope.commentToKid = 'You are correct!';
+    //         $scope.goodToMoveOn = true;
+    //     } else {
+    //         $scope.commentToKid = 'WRONG';
+    //     }
+    // };
+
     $scope.testResultMath = function(kc) {
-        if (kc === $scope.exercisesMath[$scope.exercisesArrayIndex - 1].result) {
+        if (kc === 1) {
             $scope.commentToKid = 'You are correct!';
             $scope.goodToMoveOn = true;
         } else {
@@ -185,8 +204,17 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
         }
     };
 
+    // $scope.testResultSubtraction = function(kc) {
+    //     if (kc === $scope.exercisesSubtraction[$scope.exercisesArrayIndex - 1].result) {
+    //         $scope.commentToKid = 'You are correct!';
+    //         $scope.goodToMoveOn = true;
+    //     } else {
+    //         $scope.commentToKid = 'WRONG';
+    //     }
+    // };
+
     $scope.testResultSubtraction = function(kc) {
-        if (kc === $scope.exercisesSubtraction[$scope.exercisesArrayIndex - 1].result) {
+        if (kc === 1) {
             $scope.commentToKid = 'You are correct!';
             $scope.goodToMoveOn = true;
         } else {
@@ -201,16 +229,34 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
         } else {
             $scope.commentToKid = 'WRONG';
         }
+
+        $timeout(function() {
+            $scope.triangleDown_question.active = false;
+            $scope.circle_question.active = false;
+            $scope.triangle_question.active = false;
+            $scope.square_question.active = false;
+        }, 3000);
     };
 
+    // $scope.testResultCounting = function(kc) {
+    //     if (kc === $scope.exercisesCounting[$scope.exercisesArrayIndex - 1].result) {
+    //         $scope.commentToKid = 'You are correct!';
+    //         $scope.goodToMoveOn = true;
+    //     } else {
+    //         $scope.commentToKid = 'WRONG';
+    //     }
+    // };
+
+
     $scope.testResultCounting = function(kc) {
-        if (kc === $scope.exercisesCounting[$scope.exercisesArrayIndex - 1].result) {
+        if (kc === 1) {
             $scope.commentToKid = 'You are correct!';
             $scope.goodToMoveOn = true;
         } else {
             $scope.commentToKid = 'WRONG';
         }
     };
+
 
     $scope.testResultShapes = function(kc) {
         if (kc === 1) {
