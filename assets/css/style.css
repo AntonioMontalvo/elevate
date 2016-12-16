@@ -23,6 +23,10 @@ a {
 
 }
 
+#main-title {
+	float: left;
+}
+
 h3 {
 	color: limegreen;
     margin-top: 7px;
