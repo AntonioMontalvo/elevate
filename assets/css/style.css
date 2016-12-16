@@ -2,18 +2,19 @@ body{
 	background-color: black;
 	background-image: url('../images/space.jpg');
 	font-family: 'Play', sans-serif;
-	opacity: 0.95;
+	/*opacity: 0.95;*/
 }
 
 
 
 a {
-	color: limegreen;
+	/*color: limegreen;*/
 	font-size: 20px;
 	color:white;
 }
 
 .nav-tabs {
+	padding-top: 10px;
 	border-color: limegreen;
 }
 
@@ -22,15 +23,19 @@ a {
 
 }
 
-h1 {
-	font-size: 100px;
-	text-align: center;
-	/*font-family: 'Raleway', sans-serif;*/
-	/*font-family: 'Play', sans-serif;*/
-	/*font-family: 'Orbitron', sans-serif;*/
-	/*font-family: 'Cinzel', serif;*/
-	/*font-family: 'Comfortaa', cursive;*/
-	font-family: 'Audiowide', cursive;
+h3 {
+	color: limegreen;
+    margin-top: 7px;
+    margin-bottom: 0;
+    margin-left: 953px;
+    font-size: 31px;
+    text-align: center;
+    /* font-family: 'Raleway', sans-serif; */
+    /* font-family: 'Play', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Cinzel', serif; */
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Audiowide', cursive;
 }
 
 h2 {
@@ -60,7 +65,7 @@ h6 {
 	background-color: limegreen;
 	border-radius: 21px;
 	text-align: center;
-	opacity: 0.9;
+	opacity: 0.95;
 }
 
 .row li {
@@ -79,7 +84,7 @@ h6 {
 	height: 500px;
 	border: 3px solid black;
 	margin: 80px 0 0 50px;
-/*	z-index: -1;*/
+	opacity: 0.95;
 }
 
 
@@ -91,7 +96,6 @@ h6 {
 	border-radius: 50%;
 	margin: 0 auto;
 	text-align: center;
-	
 }
 
 .choice p {
@@ -173,7 +177,7 @@ h6 {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 100px solid rgba(185, 0, 255, 0.84);;
+    border-bottom: 100px solid rgba(185, 0, 255, 0.84);
 }
 .triangle_question {
     width: 0;
@@ -199,8 +203,11 @@ h6 {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-top: 100px solid rgba(185, 0, 255, 0.84);;
+    border-top: 100px solid rgba(185, 0, 255, 0.84);
 }
+
+
+
 .triangle-down_question {
         width: 0;
     height: 0;
@@ -218,6 +225,13 @@ h6 {
 	width: 85px;
 	height: 50px;
 	margin-left: 20px;
+}
+
+#empty-space-counting { 
+	border-bottom: 2px solid black;
+	width: 85px;
+	height: 50px;
+	margin-left: -157px;
 }
 
 /* answer choices on shapes exercise */
@@ -263,4 +277,39 @@ h6 {
 	margin-top: 50px;
 }
 
+.selectedAnswer {
+	border: dotted red 5px;
+	background-color: lightblue;
+	color: purple;
+	padding-top: 1px;
+}
 
+.selectedAnswerPatterns {
+	background-color: red;
+}
+
+.selectedAnswerPatternsTriangleDown {
+	width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+}
+
+.selectedAnswerPatternsTriangleUp {
+	width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+
+#astronaut-pic {
+	width: 60%;
+	height: 60%;
+	margin-left: 83px;
+}
+
+#astronaut-answer-choice{
+	width: 247px;
+}
