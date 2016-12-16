@@ -22,7 +22,7 @@ app.use(express.static(__dirname));
 
 // -------------------------------------------------
 // MongoDB Configuration configuration (Change this URL to your own DB)
-mongoose.connect('mongodb://localhost/elevate');
+mongoose.connect('mongodb://heroku_tpp73wl2:i1v4c993u0ktk3j3plfeo2tnuj@ds133348.mlab.com:33348/heroku_tpp73wl2');
 var db = mongoose.connection;
 console.log(db);
 
