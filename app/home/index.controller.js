@@ -125,12 +125,8 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
 
 
     $scope.showPlanet = function(planet) {
-        planetObj[planet].active = true;
-        // if($scope.currentQuestion) {
-        //     $scope.currentQuestion.active = false;
-        // }
         // planetObj[planet].active = true;
-        // $scope.currentQuestion = shapeObj[shape];
+        $timeout(function() { planetObj[planet].active = true; }, 3000);
     }
 
 
