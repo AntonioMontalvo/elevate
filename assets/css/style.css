@@ -5,7 +5,17 @@ body{
 	/*opacity: 0.95;*/
 }
 
+#big-title {
+	font-size: 100px;
+	font-family: 'Audiowide', cursive;
+	color: limegreen;
+	text-align: center;
+	margin-top: 79px;
+}
 
+#login-and-registration-forms {
+	padding-top: 50px;
+}
 
 a {
 	/*color: limegreen;*/
@@ -62,6 +72,7 @@ h3 {
 
 h2 {
 	text-align: center;
+	color: white;
 }
 
 h5 {
@@ -80,7 +91,7 @@ h6 {
 
 #sidebar {
 	margin-left: -40px;
-	margin-top: 84px;
+	margin-top: 44px;
 }
 
 .sidebar-buttons {
@@ -105,7 +116,7 @@ h6 {
 	width: 799px;
 	height: 500px;
 	border: 3px solid black;
-	margin: 80px 0 0 50px;
+	margin: 38px 0 0 50px;
 	opacity: 0.95;
 }
 
