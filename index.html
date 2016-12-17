@@ -57,31 +57,25 @@
         <div class="col-xs-4"></div>
 
         <div class="col-xs-2" id="the-character">
-            <img src="../../art/elevateicon_green.png" alt="green planet" height="50" width="50">
+            <img src="art/elevateicon_green.png" height="80" width="75">
         </div>
-
-        <div class="col-xs-1">
-            <img src="../../art/magenta.png" alt="magenta planet" height="50" width="50">
+        <div class="col-xs-1"  id="addition_planet">
+            <img ng-show="planetAddition.active" src="art/blue.png" height="50" width="50">
         </div>
-
-        <div class="col-xs-1">
-            <img src="../../art/purple.png" alt="purple planet" height="50" width="50">
+        <div class="col-xs-1" id="subtraction_planet">
+            <img ng-show="planetSubtraction.active" src="art/magenta.png" height="50" width="50">
         </div>
-
-        <div class="col-xs-1">
-            <img src="../../art/red.png" alt="red planet" height="50" width="50">
+        <div class="col-xs-1" id="patterns_planet">
+            <img ng-show="planetPatterns.active" src="art/purple.png" height="50" width="50">
         </div>
-
-        <div class="col-xs-1">
-            <img src="../../art/sage.png" alt="sage planet" height="50" width="50">
+        <div class="col-xs-1" id="counting_planet">
+            <img ng-show="planetCounting.active" src="art/yellow.png" height="50" width="50">
         </div>
-
-        <div class="col-xs-1">
-            <img src="../../art/yellow.png" alt="yellow planet" height="50" width="50">
+        <div class="col-xs-1" id="measurements_planet">
+            <img ng-show="planetMeasurements.active" src="art/red.png" height="50" width="50">
         </div>
-
-        <div class="col-xs-1">
-            <img src="../../art/blue.png" alt="blue planet" height="50" width="50">
+        <div class="col-xs-1" id="shapes_planet">
+            <img ng-show="planetShapes.active" src="art/sage.png" height="50" width="50">
         </div>
         
     </div> 
@@ -259,7 +253,7 @@
 
 
 
-                        <div ng-click="testResultMath(kidChoice);postResult(mongoData());delayer('exerciseThree','exerciseFour',nextAdditionExercise);lastQuestionNextButton()" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultMath(kidChoice);postResult(mongoData());delayer('exerciseThree','exerciseFour',nextAdditionExercise);lastQuestionNextButton();showPlanet('planetAddition')" id="next-exercise">Next Exercise</div>
 
                     </div>
                     <div class="col-xs-3"></div>
@@ -429,7 +423,7 @@
                         {{commentToKid}}
                     </div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultSubtraction(kidChoice);postResult(mongoData());delayer('exerciseThree','exerciseFour',nextSubtractionExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultSubtraction(kidChoice);postResult(mongoData());delayer('exerciseThree','exerciseFour',nextSubtractionExercise);showPlanet('planetSubtraction')" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -623,7 +617,7 @@
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
 
-                        <div ng-click="testResultPatterns(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextPatternsExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultPatterns(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextPatternsExercise);showPlanet('planetShapes')" id="next-exercise">Next Exercise</div>
 
                     </div>
                     <div class="col-xs-3"></div>
@@ -772,7 +766,7 @@
                     <div class="col-xs-2"></div>
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultCounting(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextCountingExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultCounting(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextCountingExercise);showPlanet('planetCounting')" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
 
@@ -928,7 +922,7 @@
                     <div class="col-xs-2"></div>
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultShapes(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextShapesExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultShapes(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextShapesExercise);showPlanet('planetShapes')" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -1051,7 +1045,7 @@
                     <div class="col-xs-2"></div>
                     <div class="col-xs-5">{{commentToKid}}</div>
                     <div class="col-xs-2" id="next-button">
-                        <div ng-click="testResultMeasurements(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextMeasurementsExercise)" id="next-exercise">Next Exercise</div>
+                        <div ng-click="testResultMeasurements(kidChoice);postResult(mongoData());delayer('exerciseThree', 'exerciseFour', nextMeasurementsExercise);showPlanet('planetMeasurements')" id="next-exercise">Next Exercise</div>
                     </div>
                     <div class="col-xs-3"></div>
                 </div>
