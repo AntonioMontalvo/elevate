@@ -312,6 +312,14 @@ h6 {
 	margin-top: 50px;
 }
 
+<<<<<<< HEAD
+#greenplanet, #purpleplanet, #redplanet {
+	display: inline;
+	
+}
+
+
+=======
 .selectedAnswer {
 	border: dotted red 5px;
 	background-color: lightblue;
@@ -338,6 +346,7 @@ h6 {
     border-right: 50px solid transparent;
     border-bottom: 100px solid red;
 }
+>>>>>>> master
 
 #astronaut-pic {
 	width: 60%;
