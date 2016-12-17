@@ -2,6 +2,8 @@
 
 Elevate is an interactive and intergallactic learning tool for elementary children to learn math.  Elevate uses an Angular JS interface to dynamically change between exercise interfaces for the six exercise types offered: addition, subtraction, counting, measurements, patterns, and shapes.  Children will get immediate feedback for each of their answers.  Elevate uses MongoDB to save the number of correct and incorrect responses to provide an overall score for each subject.
 
+![elevate](https://cloud.githubusercontent.com/assets/18104884/21284483/33ddd5a0-c3d1-11e6-8eba-5df849d823eb.png)
+
 ## Getting Started
 
 npm install to add the necessary dependencies
