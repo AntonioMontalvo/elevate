@@ -20,8 +20,25 @@ a {
 
 .row {
 	padding-top: 40px;
-
 }
+
+.decreasemargin {
+	margin-top: 0px;
+}
+
+#the-planet-points-box {
+	margin-right: 0px;
+	margin-top: -14px;
+}
+
+#the-character {
+	margin-left: -40px;
+    margin-right: 40px;
+}
+
+/*#the-main-box {
+	margin-top: -40px;
+}*/
 
 #main-title {
 	float: left;
@@ -62,7 +79,7 @@ h6 {
 
 #sidebar {
 	margin-left: -40px;
-	margin-top: 109px;
+	margin-top: 84px;
 }
 
 .sidebar-buttons {
@@ -78,7 +95,7 @@ h6 {
 	list-style-type: none;
 	/*border: 2px solid red;*/
 	width: 250px;
-	height: 80px;
+	height: 77px;
 }
 
 #encapsulate {
