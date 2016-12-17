@@ -101,6 +101,37 @@ ElevateApp.controller('HomeCtrl', ['$scope', '$timeout', '$http', function($scop
     //     subject: ""
     // };
 
+      ////////////////////////////////////////////
+    //////show planets
+    ////////////////////////////////////////////
+
+
+    $scope.planetAddition = {active: false};
+    $scope.planetSubtraction = {active: false};
+    $scope.planetPatterns = {active: false};
+    $scope.planetCounting = {active: false};
+    $scope.planetShapes = {active: false};
+    $scope.planetMeasurements = {active: false};
+
+    var planetObj = {
+        planetAddition: $scope.planetAddition,
+        planetSubtraction: $scope.planetSubtraction,
+        planetPatterns: $scope.planetPatterns,
+        planetCounting: $scope.planetCounting,
+        planetShapes: $scope.planetShapes,
+        planetMeasurements: $scope.planetMeasurements,
+
+    }
+
+
+    $scope.showPlanet = function(planet) {
+        planetObj[planet].active = true;
+        // if($scope.currentQuestion) {
+        //     $scope.currentQuestion.active = false;
+        // }
+        // planetObj[planet].active = true;
+        // $scope.currentQuestion = shapeObj[shape];
+    }
 
 
     $scope.kidChoice = null;
