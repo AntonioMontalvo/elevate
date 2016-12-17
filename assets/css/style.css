@@ -2,18 +2,19 @@ body{
 	background-color: black;
 	background-image: url('../images/space.jpg');
 	font-family: 'Play', sans-serif;
-	opacity: 0.95;
+	/*opacity: 0.95;*/
 }
 
 
 
 a {
-	color: limegreen;
+	/*color: limegreen;*/
 	font-size: 20px;
 	color:white;
 }
 
 .nav-tabs {
+	padding-top: 10px;
 	border-color: limegreen;
 }
 
@@ -22,15 +23,23 @@ a {
 
 }
 
-h1 {
-	font-size: 100px;
-	text-align: center;
-	/*font-family: 'Raleway', sans-serif;*/
-	/*font-family: 'Play', sans-serif;*/
-	/*font-family: 'Orbitron', sans-serif;*/
-	/*font-family: 'Cinzel', serif;*/
-	/*font-family: 'Comfortaa', cursive;*/
-	font-family: 'Audiowide', cursive;
+#main-title {
+	float: left;
+}
+
+h3 {
+	color: limegreen;
+    margin-top: 7px;
+    margin-bottom: 0;
+    margin-left: 953px;
+    font-size: 31px;
+    text-align: center;
+    /* font-family: 'Raleway', sans-serif; */
+    /* font-family: 'Play', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Cinzel', serif; */
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Audiowide', cursive;
 }
 
 h2 {
@@ -40,6 +49,11 @@ h2 {
 h5 {
 	font-size: 44px;
 	margin-top: 150px;
+}
+
+h6 {
+	font-size:30px;
+	margin-top:100px;
 }
 
 #main{
@@ -55,7 +69,7 @@ h5 {
 	background-color: limegreen;
 	border-radius: 21px;
 	text-align: center;
-	opacity: 0.9;
+	opacity: 0.95;
 }
 
 .row li {
@@ -74,7 +88,7 @@ h5 {
 	height: 500px;
 	border: 3px solid black;
 	margin: 80px 0 0 50px;
-/*	z-index: -1;*/
+	opacity: 0.95;
 }
 
 
@@ -86,13 +100,34 @@ h5 {
 	border-radius: 50%;
 	margin: 0 auto;
 	text-align: center;
-	
 }
 
 .choice p {
 	margin-top: 20px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
+}
+
+.parentChoice {
+	width: 110px;
+    height: 60px;
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 10%;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+
+.parentChoice p {
+	margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#resultsColumn {
+	padding-left: 50px;
+	width: 28.666667%;
 }
 
 #block-question {
@@ -146,7 +181,7 @@ h5 {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 100px solid rgba(185, 0, 255, 0.84);;
+    border-bottom: 100px solid rgba(185, 0, 255, 0.84);
 }
 .triangle_question {
     width: 0;
@@ -172,15 +207,32 @@ h5 {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-top: 100px solid rgba(185, 0, 255, 0.84);;
+    border-top: 100px solid rgba(185, 0, 255, 0.84);
 }
+
+.square_question {
+	width: 50px;
+    height: 50px;
+    background: rgba(0, 67, 255, 0.84);;
+}
+
+.triangle_question {
+	width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid rgba(0, 67, 255, 0.84);
+}
+
+
 .triangle-down_question {
-        width: 0;
+    width: 0;
     height: 0;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     border-top: 50px solid rgba(0, 67, 255, 0.84);
 }
+
 #options {
 	    margin-left: inherit;
 	    padding-left: 51px;
@@ -190,7 +242,14 @@ h5 {
 	border-bottom: 2px solid black;
 	width: 85px;
 	height: 50px;
-	margin-left: 20px;
+	margin-left: 7px;
+}
+
+#empty-space-counting { 
+	border-bottom: 2px solid black;
+	width: 85px;
+	height: 50px;
+	margin-left: -157px;
 }
 
 /* answer choices on shapes exercise */
@@ -236,10 +295,48 @@ h5 {
 	margin-top: 50px;
 }
 
+<<<<<<< HEAD
 #greenplanet, #purpleplanet, #redplanet {
 	display: inline;
 	
 }
 
 
+=======
+.selectedAnswer {
+	border: dotted red 5px;
+	background-color: lightblue;
+	color: purple;
+	padding-top: 1px;
+}
 
+.selectedAnswerPatterns {
+	background-color: red;
+}
+
+.selectedAnswerPatternsTriangleDown {
+	width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+}
+
+.selectedAnswerPatternsTriangleUp {
+	width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+>>>>>>> master
+
+#astronaut-pic {
+	width: 60%;
+	height: 60%;
+	margin-left: 83px;
+}
+
+#astronaut-answer-choice{
+	width: 247px;
+}

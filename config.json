@@ -1,5 +1,5 @@
 {
-    "connectionString": "mongodb://localhost/elevate",
+    "connectionString": "mongodb://heroku_tpp73wl2:i1v4c993u0ktk3j3plfeo2tnuj@ds133348.mlab.com:33348/heroku_tpp73wl2",
     "apiUrl": "http://localhost:3000/api",
     "secret": "elevate"
 }
