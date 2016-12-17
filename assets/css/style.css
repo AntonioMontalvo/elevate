@@ -20,7 +20,25 @@ a {
 
 .row {
 	padding-top: 40px;
+}
 
+.decreasemargin {
+	margin-top: 0px;
+}
+
+#the-planet-points-box {
+	margin-right: 0px;
+	margin-top: -19px;
+}
+
+#the-character {
+	margin-left: -40px;
+    margin-right: 40px;
+}
+
+#the-main-box {
+	margin-top: -40px;
+	padding-top: 0px;
 }
 
 #main-title {
@@ -62,7 +80,7 @@ h6 {
 
 #sidebar {
 	margin-left: -40px;
-	margin-top: 109px;
+	margin-top: 84px;
 }
 
 .sidebar-buttons {
@@ -78,7 +96,7 @@ h6 {
 	list-style-type: none;
 	/*border: 2px solid red;*/
 	width: 250px;
-	height: 80px;
+	height: 77px;
 }
 
 #encapsulate {
@@ -196,11 +214,11 @@ h6 {
     background: rgba(185, 0, 255, 0.84);;
 }
 
-.square_question {
+/*.square_question {
     width: 100px;
     height: 100px;
     background: rgba(0, 67, 255, 0.84);
-}
+}*/
 
 .triangle-down {
     width: 0;
@@ -295,14 +313,14 @@ h6 {
 	margin-top: 50px;
 }
 
-<<<<<<< HEAD
+
 #greenplanet, #purpleplanet, #redplanet {
 	display: inline;
 	
 }
 
 
-=======
+
 .selectedAnswer {
 	border: dotted red 5px;
 	background-color: lightblue;
@@ -329,7 +347,7 @@ h6 {
     border-right: 50px solid transparent;
     border-bottom: 100px solid red;
 }
->>>>>>> master
+
 
 #astronaut-pic {
 	width: 60%;
