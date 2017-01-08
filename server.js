@@ -5,6 +5,12 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var logger = require('morgan');
 
+var flash = require('connect-flash');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var path = require('path');
+var jsonParser = bodyParser.json();
+
 var app  = express();
 
 var PORT = process.env.PORT || 3000;
@@ -19,6 +25,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static(__dirname));
+
 
 // -------------------------------------------------
 // MongoDB Configuration configuration (Change this URL to your own DB)
@@ -38,9 +45,18 @@ var Result = require('./models/result.js');
 
 //--------------------------------------------------
 // Main Route. 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
-})
+// app.get('/', function(req, res){
+//   res.sendFile(__dirname + '/index.html');
+// })
+
+//ROUTES
+// require("./app/routers/api-routes.js")(app)
+require("./routers/html-routes.js")(app)
+
+//--------------------------------------------------
+
+
+
 
 // Handle form submission, save submission to mongo
 app.post('/results', function(req, res) {

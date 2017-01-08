@@ -2,31 +2,44 @@ body{
 	background-color: black;
 	background-image: url('../images/space.jpg');
 	font-family: 'Play', sans-serif;
-	/*opacity: 0.95;*/
 }
 
-#big-title {
-	font-size: 100px;
-	font-family: 'Audiowide', cursive;
-	color: limegreen;
-	text-align: center;
-	margin-top: 79px;
-}
-
+/**********************************
+			NAVBAR
+**********************************/
 #login-and-registration-forms {
 	padding-top: 50px;
 }
 
 a {
-	/*color: limegreen;*/
 	font-size: 20px;
 	color:white;
 }
 
-.nav-tabs {
+.navbar {
 	padding-top: 10px;
-	border-color: limegreen;
+	border-bottom: 2px limegreen solid;
 }
+
+.dropdown-item {
+	color: blue;
+	display: block;
+	text-align: center;
+}
+
+.dropdown-menu:hover {	
+	background-color: limegreen;
+}
+
+.dropdown-menu a:hover {
+	text-decoration: none;
+	color: blue;
+}
+/**********************************
+		End of NAVBAR
+**********************************/
+
+
 
 .row {
 	padding-top: 40px;
@@ -38,7 +51,7 @@ a {
 
 #the-planet-points-box {
 	margin-right: 0px;
-	margin-top: -19px;
+	margin-top: 59px;
 }
 
 #the-character {
@@ -48,27 +61,28 @@ a {
 
 #the-main-box {
 	/*margin-top: -40px;*/
-	padding-top: 0px;
+	padding-top: 1px;
 }
 
 #main-title {
 	float: left;
 }
 
-h3 {
+.navbar-header {
+	padding-left: 0;
+	padding-bottom: 2px;
+}
+
+#app-title-left-corner {
 	color: limegreen;
-    margin-top: 7px;
+	margin-top: 7px;
     margin-bottom: 0;
-    margin-left: 953px;
     font-size: 31px;
     text-align: center;
-    /* font-family: 'Raleway', sans-serif; */
-    /* font-family: 'Play', sans-serif; */
-    /* font-family: 'Orbitron', sans-serif; */
-    /* font-family: 'Cinzel', serif; */
-    /* font-family: 'Comfortaa', cursive; */
     font-family: 'Audiowide', cursive;
 }
+
+
 
 h2 {
 	text-align: center;

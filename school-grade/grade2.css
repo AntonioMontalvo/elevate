@@ -1,0 +1,21 @@
+/*body{
+	background-color: black;
+	background-image: url('../assets/images/space-bg6.jpg');
+	background-repeat:no-repeat;
+   	background-size:cover;
+	font-family: 'Play', sans-serif;
+}*/
+
+.sidebar-buttons {
+	background-color: #ff7222;
+}
+
+#encapsulate {
+	background-color: #ff9a3d;
+	opacity: 0.9;
+}
+
+#next-exercise {
+	background-color: #ff7222;
+	color: white;
+}

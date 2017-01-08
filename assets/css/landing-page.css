@@ -1,0 +1,41 @@
+body{
+	background-color: black;
+	font-family: 'Play', sans-serif;
+	/*opacity: 0.95;*/
+	background-image: url('../images/space.jpg');
+}
+
+#header {
+	margin-top: 90px;
+}
+
+#header h1 {
+	font-size: 100px;
+	font-family: 'Audiowide', cursive;
+	color: limegreen;
+	text-align: center;
+}
+
+#login-and-registration-forms {
+	padding-top: 50px;
+}
+
+a {
+	font-size: 20px;
+	color:white;
+}
+
+.row {
+	padding-top: 40px;
+}
+
+h2 {
+	text-align: center;
+	color: white;
+}
+
+
+
+
+
+
