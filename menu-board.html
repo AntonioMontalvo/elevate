@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html ng-app='Elevate'>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Elevate</title>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Cinzel|Comfortaa|Orbitron|Play|Raleway" rel="stylesheet">
+
+  <!-- animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  
+  <link rel="stylesheet" href="assets/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/home-style.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/menu-board-style.css" type="text/css">
+  <!-- <link rel="stylesheet" href="assets/css/animate.css" type="text/css"> -->
+  
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+  <!-- ui-router -->
+  <!-- <script src="../vendor/angular-ui-router.min.js"></script> -->
+
+    <!-- ngrouter -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <!-- app -->
+    <script src="../app.js"></script>
+    <script src="../app/app-services/user.service.js"></script>
+    <script src="../app/child/child.controller.js"></script>
+    <script src="../app/child/exercises/exercises.controller.js"></script>
+    <script src="index.controller.js"></script>
+    <script src="../app/parent/parent.controller.js"></script>
+    <script src="../app/teacher/teacher.controller.js"></script>
+
+</head>
+
+<body ng-controller='HomeCtrl' class="container" style="overflow:hidden;">
+    
+
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/grade-levels">
+                    <span id="app-title-left-corner">Elevate</span>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/grade-levels">Home</a>
+                    </li>
+                    <li>
+                        <a href="#ranking">Ranking</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+                      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                        <a class="dropdown-item" href="/title">Log out</a>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    
+
+  <section>
+    <div class="row" id="select-your-level-title">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+        <h1>Select Your Grade Level</h1>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+
+    <div class="row"> 
+      <div id="first-grade">
+        <a href="app/home/home-index.html">  
+          <div class="col-xs-4 menu-item" >
+            <div class='level-pic'>
+                <img src='assets/art/sage.png'>
+            </div>
+            <div class='level-info'>
+              <h2>Grade 1</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div id="second-grade">
+        <a href="school-grade/grade2.html">  
+          <div class="col-xs-4 menu-item">
+            <div class='level-pic'>
+                <img src='assets/art/red.png'>
+            </div>
+            <div class='level-info'>
+              <h2>Grade 2</h2>
+            </div>
+          </div> 
+        </a>
+      </div> 
+      <div id="third-grade">
+        <a href="school-grade/grade3.html"> 
+          <div class="col-xs-4 menu-item">
+            <div class='level-pic'>
+                <img src='assets/art/blue.png'>
+            </div>
+            <div class='level-info'>
+              <h2>Grade 3</h2>
+            </div>
+          </div>
+        </a> 
+      </div> 
+    </div>
+
+    <div class="row"> 
+      <div id="fourth-grade">
+        <a href="school-grade/grade4.html">  
+          <div class="col-xs-4 menu-item">
+            <div class='level-pic'>
+                <img src='assets/art/magenta.png'>
+            </div>
+            <div class='level-info'>
+              <h2>Grade 4</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div id="fifth-grade">
+        <a href="school-grade/grade5.html">  
+          <div class="col-xs-4 menu-item">
+            <div class='level-pic'>
+                <img src='assets/art/yellow.png'>
+            </div>
+            <div class='level-info'>
+              <h2>Grade 5</h2>
+            </div>
+          </div> 
+        </a>
+      </div> 
+      <div id="sixth-grade">
+        <a href="school-grade/grade6.html"> 
+          <div class="col-xs-4 menu-item">
+            <div class='level-pic'>
+                <img src='assets/art/purple.png'>
+            </div>
+            <div class='level-info'>
+              <h2>Grade 6</h2>
+            </div>
+          </div>
+        </a> 
+      </div>
+    </div>
+
+    
+
+    
+  </section>
+
+  <script>
+
+     
+   
+    
+
+    // $('#first-grade').on('click', function(){
+    //   $('#first-grade').addClass('animated fadeOut');
+    // });
+
+    // setTimeout(one, 2000);
+   
+  </script>
+
+
+
+
+</body>
+</html>

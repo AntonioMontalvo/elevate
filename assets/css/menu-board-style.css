@@ -1,0 +1,64 @@
+section {
+	margin-top: 76px;
+	margin-left: 88px;
+}
+
+.row {
+	padding-top: 43px;
+}
+
+.menu-item {
+	border: 2px red solid;
+	width: 273px;
+	height: 162px;
+	margin-left: 44px;
+	background: rgba(243, 162, 188, .7);
+}
+
+.menu-item:hover {
+	border: 5px blue solid;
+}
+
+
+
+#select-your-level-title {
+	padding-left: 10px;
+}
+
+.level-pic {
+	display: inline;
+}
+
+.level-pic img {
+	padding-top: 18px;
+}
+
+.level-info {
+	margin-bottom: 10px;
+	display: inline;
+	float: right;
+	padding-top: 24px;
+}
+
+h1 {
+	color: white;
+	font-size: 40px;
+}
+
+h2 {
+	color: white;
+	font-size: 30px;
+	text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+img {
+	width: 40%;
+}
+
+
+
+
+
+
+
+
