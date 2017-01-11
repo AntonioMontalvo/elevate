@@ -5,6 +5,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var logger = require('morgan');
 
+var jwt = require('jsonwebtoken');
+var config = require('./config');
+var Cookies = require('cookies');
+
 var flash = require('connect-flash');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
@@ -15,21 +19,25 @@ var app  = express();
 
 var PORT = process.env.PORT || 3000;
 
+app.set('jwtSecret', config.secret);
+
 
 // Run Morgan for Logging
 app.use(logger('dev'));
 //Set up the Express app to handle data parsing
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended:false})); //this was true before
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static(__dirname));
 
+app.disable('etag');
 
 // -------------------------------------------------
 // MongoDB Configuration configuration (Change this URL to your own DB)
 mongoose.connect('mongodb://heroku_tpp73wl2:i1v4c993u0ktk3j3plfeo2tnuj@ds133348.mlab.com:33348/heroku_tpp73wl2');
+// mongoose.connect('mongodb://localhost/elevate');
 var db = mongoose.connection;
 console.log(db);
 
@@ -43,6 +51,8 @@ db.once('open', function () {
 
 var Result = require('./models/result.js');
 
+
+var User = require('./userModel.js');
 //--------------------------------------------------
 // Main Route. 
 // app.get('/', function(req, res){
@@ -147,6 +157,83 @@ app.get('/results/:subject', function(req, res){
 //   });
 // });
 
+
+
+// =================================================================
+// routes ==========================================================
+// =================================================================
+
+app.get('/', function(req, res){//Landing on '/' will show index.html
+    res.send(index.html);
+});
+
+app.get('/logon', function(req, res){
+    res.render('login.html');
+});
+
+app.post('/signup', function(req, res){
+    var userInfo = new User(req.body);//We crate an instance of User. We pass req.body as an argument. Remember req.body is an object. 
+
+    userInfo.save(function(err, doc){//save the req.body data to mongoDB.
+        if (err){
+            res.send(err);
+        }
+        else {
+            console.log("SignUp successful")
+            // res.send(doc);//send the data 'doc' to the browser   
+        }   
+    });
+});
+
+
+
+app.post('/login', function(req, res){
+    User.findOne({
+        username: req.body.username
+    }, function(err, user){
+            if(err) throw err;
+
+            if (!user){
+                console.log('user not found');
+            } else if (user) {
+                if (user.password != req.body.password) {
+                console.log('wrong password');
+                } else {
+                var token = jwt.sign(user, app.get('jwtSecret'), {
+                    expiresIn: 86400
+                });
+
+
+                // for debug purposes
+                console.log("Cookie Sent")
+
+                // The Cookie will be named 'access_token'.
+                new Cookies(req, res).set('access_token', token, {
+                    httpOnly: true,
+                    secure: false
+                    });
+
+                
+
+                console.log('token successfully created');
+
+
+                
+                // res.json({
+                //  success: true,
+                //  message: 'Enjoy your token',
+                //  token: token
+                // });  
+
+                // window.location.replace('login.html');
+
+
+                res.redirect('/logon');
+
+            }
+        }   
+    });
+});
 
 app.listen(PORT, function(){
 	console.log('App listening on PORT: ' + PORT);

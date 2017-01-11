@@ -18,6 +18,10 @@ module.exports = function(app){
 		res.sendFile(path.join(__dirname + '/../index.html'));
 	});
 
+	app.get('/about', function(req, res){
+		res.sendFile(path.join(__dirname + '/../about-page.html'));
+	});
+
 	app.get('/grade-levels', function(req, res){
 		res.sendFile(path.join(__dirname + '/../menu-board.html'));
 	});
