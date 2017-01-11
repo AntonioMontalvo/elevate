@@ -37,66 +37,62 @@
                     <div class="col-md-1"></div>
 
                     <div class="col-md-4">
-                        <div class="form-container" id="login-section">
-                            <h2>Login</h2>
-                            <form method="post">
-                                <div class="form-group">
-                                    <label for="username">Username</label>
-                                    <input type="text" name="username" id="username" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <a href="app/home/home-index.html"><button type="submit" class="btn btn-primary">Login</button></a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-2"></div>
-
-                    
-
-                    
-                    <div class="col-md-4">
                         <div class="form-container" id="register-section">
                             <h2>Register</h2>
                             <form method="post">
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="firstName">First name</label>
                                     <input type="text" name="firstName" id="firstName" class="form-control" required />
                                 </div>
                                 <div class="form-group">
                                     <label for="lastName">Last name</label>
                                     <input type="text" name="lastName" id="lastName" class="form-control" required />
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <label for="username">Username</label>
-                                    <input type="text" name="username" id="username" class="form-control" required />
+                                    <input type="text" name="username" id="signup-username" class="form-control" required />
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control" required />
+                                    <input type="password" name="password" id="signup-password" class="form-control" required />
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary">Register</button>
-                                    <a href="#" class="btn btn-link">Cancel</a>
+                                    <button type="submit" class="btn btn-primary" id="signup" onclick="ClearFields();">Register</button>
                                 </div>
                             </form>
                         </div>
                     </div>
+
+                    
+                    <div class="col-md-2"></div>
+
+                    <div class="col-md-4">
+                        <div class="form-container" id="login-section">
+                            <h2>Login</h2>
+                            <!-- <form method="post"> -->
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" id="login-username" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="login-password" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <a href="/grade-levels">
+                                        <!-- <button class="btn btn-primary" id="login">Login</button> -->
+                                        <button class="btn btn-primary">Login</button>
+                                    </a>
+
+                                </div>
+                            <!-- </form> -->
+                        </div>
+                    </div>    
+                    
                     <div class="col-md-1"></div>
+
                 </div> 
 
-                 <div class="row" id="delete-this-once-done-testing">
-                    <a href="/grade-levels">
-                        <input type="submit" value="Go to Elevate panel" />
-                    </a>
-                </div> 
             </header>
         </div>
     </div>
@@ -107,6 +103,65 @@
         window.onload = function() { document.body.className = ''; }
         window.ontouchmove = function() { return false; }
         window.onorientationchange = function() { document.body.scrollTop = 0; }
+
+        // -------------------------------
+        // -------------------------------
+        // -------------------------------
+
+        // define sign in function
+    function signUp(){
+        // grab data from form
+        var data = {
+            username: $('#signup-username').val().trim(),
+            password: $('#signup-password').val().trim()
+        }
+        // grab url to ajax call
+        var currentURL = "/signup";
+
+        // post our login data
+        $.post(currentURL, data, function(results){
+            console.log(results);
+        });
+    }
+
+    function logIn(){
+        // grab data from form
+        var data = {
+            username: $('#login-username').val().trim(),
+            password: $('#login-password').val().trim()
+        }
+        // grab url to ajax call
+        var currentURL = "/login";
+
+        // post our login data
+        $.post(currentURL, data, function(results){
+            dataType: 'json'
+        });
+    }
+
+    // define call on button
+    $(document).on('click', '#signup', function(){
+        // sign in
+        signUp();
+
+        // prevent default behavior
+        return false;
+    })
+
+    $(document).on('click', '#login', function(){
+        // sign in
+        logIn();
+
+        // prevent default behavior
+        return false;
+    })
+
+    function ClearFields() {
+         document.getElementById("signup-username").value = "";
+         document.getElementById("signup-password").value = "";
+    }
+
+
     </script>
 </body>
 </html>
